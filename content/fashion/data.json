@@ -1,0 +1,20 @@
+[
+  {
+    "id": "ss25",
+    "title": "Spring Summer 2025",
+    "description": "Exploration of modern minimalism and utilitarian shapes.",
+    "images": [
+      "https://picsum.photos/seed/fashion1/800/1000",
+      "https://picsum.photos/seed/fashion2/800/1000"
+    ],
+    "video": "https://www.w3schools.com/html/mov_bbb.mp4"
+  },
+  {
+    "id": "fw24",
+    "title": "Fall Winter 2024",
+    "description": "A study in dark aesthetics and heavy draping.",
+    "images": [
+      "https://picsum.photos/seed/fashion3/800/1000"
+    ]
+  }
+]
