@@ -1,20 +1,39 @@
 [
   {
-    "id": "ss25",
-    "title": "Spring Summer 2025",
+    "id": "\"25",
+    "title": "\"25: Solstice Zest",
     "description": "Exploration of modern minimalism and utilitarian shapes.",
-    "images": [
-      "https://picsum.photos/seed/fashion1/800/1000",
-      "https://picsum.photos/seed/fashion2/800/1000"
-    ],
-    "video": "https://www.w3schools.com/html/mov_bbb.mp4"
+    "coverImage": "https://picsum.photos/seed/fashion_cover_1/800/800",
+    "artworks": [
+      { "id": "25-1", "title": "Look 1", "image": "https://picsum.photos/seed/fashion25_1/800/1000", "video": "https://drive.google.com/file/d/1guKGa55azBVIgjDFg3IEilCnCZfAbZQO/preview" },
+      { "id": "25-2", "title": "Look 2", "image": "https://picsum.photos/seed/fashion25_2/800/1000", "video": "https://drive.google.com/file/d/1Z7anv9vbet9T0S78T-zsqIihJc5PrPq4/view?usp=drive_link" },
+      { "id": "25-3", "title": "Look 3", "image": "https://picsum.photos/seed/fashion25_3/800/1000", "video": "https://drive.google.com/file/d/10guF5YnIxB8mMPi44MFZBIivq4ltERue/view?usp=drive_link" },
+      { "id": "25-4", "title": "Look 4", "image": "https://picsum.photos/seed/fashion25_4/800/1000", "video": "https://drive.google.com/file/d/1zpPZi3Q8xVnBU1g3msWOt5BOBkqml5rn/view?usp=drive_link" },
+      { "id": "25-5", "title": "Look 5", "image": "https://picsum.photos/seed/fashion25_5/800/1000", "video": "https://drive.google.com/file/d/1LGdXs_HjLgJa281c_oBKYbVsR3redpM-/view?usp=drive_link" },
+      { "id": "25-6", "title": "Look 6", "image": "https://picsum.photos/seed/fashion25_6/800/1000", "video": "https://drive.google.com/file/d/1S2MkDCgJN1X0KkDA_7AQo439G0i-Ll_6/view?usp=drive_link" },
+      { "id": "25-7", "title": "Look 7", "image": "https://picsum.photos/seed/fashion25_7/800/1000", "video": "https://drive.google.com/file/d/1bTnpoDFqYQ2su9BDounJOMzIYwJfmkaa/view?usp=drive_link" },
+      { "id": "25-8", "title": "Look 8", "image": "https://picsum.photos/seed/fashion25_8/800/1000", "video": "https://drive.google.com/file/d/1UadKoMxZGTMdQiCHPliLIP1VkYT-OQ6n/view?usp=drive_link" },
+      { "id": "25-9", "title": "Look 9", "image": "https://picsum.photos/seed/fashion25_9/800/1000", "video": "https://drive.google.com/file/d/1OmzZ5F9vNXmIpvCHkM-GXm6qvqgS0nOK/view?usp=drive_link" },
+      { "id": "25-10", "title": "Look 10", "image": "https://picsum.photos/seed/fashion25_10/800/1000", "video": "https://drive.google.com/file/d/1kwKCxNIWwUEVG5gIfQpyR8p073wbegS1/view?usp=drive_link" }
+    ]
   },
   {
-    "id": "fw24",
-    "title": "Fall Winter 2024",
+    "id": "\"24",
+    "title": "\"24: Contours Libérés",
     "description": "A study in dark aesthetics and heavy draping.",
-    "images": [
-      "https://picsum.photos/seed/fashion3/800/1000"
+    "coverImage": "https://picsum.photos/seed/fashion_cover_2/800/800",
+    "artworks": [
+      { "id": "24-1", "title": "Cat Girl", "image": "https://picsum.photos/seed/fashion24_1/800/1000", "video": "https://drive.google.com/file/d/1utVZzfCp8f7Aq9efvqMQXyAUoL3GQ20V/preview" },
+      { "id": "24-2", "title": "Look 2", "image": "https://picsum.photos/seed/fashion24_2/800/1000", "video": "https://drive.google.com/file/d/1yV2BKyPFcM6HmBrSHIKS8wh2tlCpN9Vn/view?usp=drive_link" },
+      { "id": "24-3", "title": "Look 3", "image": "https://picsum.photos/seed/fashion24_3/800/1000", "video": "https://drive.google.com/file/d/1ryZ3Med-RSskfBieOBhCundSc5u3JAkY/view?usp=drive_link" },
+      { "id": "24-4", "title": "Look 4", "image": "https://picsum.photos/seed/fashion24_4/800/1000", "video": "https://drive.google.com/file/d/1J58VqApmpcNthtztmEvJYDu8WCjqWYnF/view?usp=drive_link" },
+      { "id": "24-5", "title": "Look 5", "image": "https://picsum.photos/seed/fashion24_5/800/1000", "video": "https://drive.google.com/file/d/124moKLf1AnzxbUXAzrc3sRlb0FiDcu6U/view?usp=drive_link" },
+      { "id": "24-6", "title": "Look 6", "image": "https://picsum.photos/seed/fashion24_6/800/1000", "video": "https://drive.google.com/file/d/1SZcUyr---XeOPsTUHexGjkBMXGk6riBQ/view?usp=sharing" },
+      { "id": "24-7", "title": "Look 7", "image": "https://picsum.photos/seed/fashion24_7/800/1000", "video": "https://drive.google.com/file/d/1YvWT8iSJyyYQt5UQkmdhQF2Zqw-yJcUP/view?usp=drive_link" },
+      { "id": "24-8", "title": "Look 8", "image": "https://picsum.photos/seed/fashion24_8/800/1000", "video": "https://drive.google.com/file/d/14xEwMBsTOympN8eUCRDFIL44OYUo6c1j/view?usp=drive_link" },
+      { "id": "24-9", "title": "Look 9", "image": "https://picsum.photos/seed/fashion24_9/800/1000", "video": "https://drive.google.com/file/d/1w2j25BimqVJtUIh_msiO4piGu5bNmFSF/view?usp=drive_link" },
+      { "id": "24-10", "title": "Look 10", "image": "https://picsum.photos/seed/fashion24_10/800/1000", "video": "https://drive.google.com/file/d/1X9Wqx3brcNia1-TQzv1xx0WE8YEJmKQx/view?usp=sharing" },
+      { "id": "24-11", "title": "Look 11", "image": "https://picsum.photos/seed/fashion24_11/800/1000", "video": "https://drive.google.com/file/d/1bOktsO-I3ZvznCyMVzh2zXfFIgu8e-ZQ/view?usp=drive_link" }
     ]
   }
 ]

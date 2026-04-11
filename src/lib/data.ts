@@ -13,19 +13,25 @@ export interface CodeProject {
   content: string;
 }
 
+export interface FashionArtwork {
+  id: string;
+  title: string;
+  image: string;
+  video: string;
+}
+
 export interface FashionCollection {
   id: string;
   title: string;
   description: string;
-  images: string[];
-  video?: string;
+  coverImage: string;
+  artworks: FashionArtwork[];
 }
 
 export interface MusicItem {
   id: string;
   title: string;
   artist: string;
-  coverImage: string;
   spotifyUrl: string;
 }
 

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 import LayoutContainer from '@/components/LayoutContainer';
 import ProfileHeader from '@/components/ProfileHeader';
 import StickyTabs from '@/components/StickyTabs';
@@ -34,7 +35,7 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
-              <h2 className="font-serif text-3xl mb-8 tracking-wide">程式專案 (Code)</h2>
+              <h2 className="font-mono text-3xl mb-8 tracking-wide">程式專案 (Code)</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {codeProjects.map(project => (
                   <div key={project.slug} className="p-6 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded hover:shadow-xl dark:hover:shadow-stone-800/30 transition-all duration-300 group">
@@ -71,36 +72,24 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
-              <h2 className="font-serif text-3xl mb-8 tracking-wide">服裝設計 (Fashion)</h2>
-              <div className="flex flex-col gap-16">
-                {fashionCollections.map(collection => (
-                  <div key={collection.id} className="flex flex-col md:flex-row gap-8 items-center border border-stone-100 dark:border-stone-800 p-4 bg-white dark:bg-stone-900 rounded shadow-sm">
-                    {/* 左右分欄: 左側圖片/說明, 右側影片 */}
-                    <div className="flex-1 space-y-4 w-full">
-                      <h3 className="font-serif text-2xl font-bold">{collection.title}</h3>
-                      <p className="text-stone-500 dark:text-stone-400 text-sm">{collection.description}</p>
-                      {/* Image Preview */}
-                      {collection.images[0] && (
-                        <div className="aspect-[4/5] bg-stone-100 dark:bg-stone-800 overflow-hidden rounded relative">
-                          <img src={collection.images[0]} alt={collection.title} className="w-full h-full object-cover" />
-                        </div>
-                      )}
+              <h2 className="font-mono text-3xl mb-8 tracking-wide">服裝設計專題 (Fashion Projects)</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                {fashionCollections.map((collection, index) => (
+                  <Link 
+                    key={collection.id} 
+                    href={`/fashion/${index}`} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="group block relative aspect-square bg-stone-100 dark:bg-stone-800 rounded overflow-hidden shadow-sm hover:shadow-xl dark:shadow-stone-900/50 transition-all"
+                  >
+                    <img src={collection.coverImage} alt={collection.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                      <h3 className="font-serif text-2xl font-bold text-white mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">{collection.title}</h3>
+                      <p className="text-stone-200 text-sm translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75 line-clamp-2">
+                        {collection.description}
+                      </p>
                     </div>
-                    <div className="flex-1 w-full flex items-center justify-center bg-stone-50 dark:bg-stone-950 rounded overflow-hidden aspect-[4/5]">
-                      {collection.video ? (
-                        <video 
-                          src={collection.video} 
-                          className="w-full h-full object-cover"
-                          autoPlay 
-                          muted 
-                          loop 
-                          playsInline
-                        />
-                      ) : (
-                        <div className="text-stone-300 dark:text-stone-700 tracking-wider text-sm font-medium">NO VIDEO</div>
-                      )}
-                    </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </motion.div>
@@ -114,7 +103,7 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
-              <h2 className="font-serif text-3xl mb-8 tracking-wide">音樂推薦 (Music)</h2>
+              <h2 className="font-mono text-3xl mb-8 tracking-wide">2026 TOP UPDATE</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div>
@@ -123,13 +112,28 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
                     Top Tracks 單曲排行
                   </h3>
                   <div className="flex flex-col gap-4">
-                    {musicCharts.tracks.map((track, idx) => (
+                    {musicCharts.tracks.map((track, idx) => {
+                      const isSpotifyLink = track.spotifyUrl.includes('/track/');
+                      const embedUrl = isSpotifyLink ? track.spotifyUrl.replace('/track/', '/embed/track/').split('?')[0] : '';
+                      
+                      return (
                       <div key={track.id} className="p-4 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded flex gap-4 items-center shadow-sm hover:shadow-md dark:shadow-stone-900 transition-shadow">
-                        <div className="w-6 font-serif italic text-xl text-stone-300 dark:text-stone-600 flex items-center justify-center shrink-0">
+                        <div className="w-6 font-sans font-medium italic text-xl text-stone-300 dark:text-stone-600 flex items-center justify-center shrink-0 lining-nums">
                           {idx + 1}
                         </div>
-                        <div className="w-12 h-12 shrink-0 bg-stone-200 dark:bg-stone-800 overflow-hidden rounded border border-stone-200 dark:border-stone-700 shadow-sm">
-                          <img src={track.coverImage} alt={track.title} className="w-full h-full object-cover" />
+                        <div className="w-[64px] h-[64px] shrink-0 bg-stone-200 dark:bg-stone-800 overflow-hidden rounded border border-stone-200 dark:border-stone-700 shadow-sm relative pointer-events-none">
+                          {embedUrl ? (
+                            <iframe 
+                              src={embedUrl} 
+                              width="300" 
+                              height="80" 
+                              frameBorder="0" 
+                              allow="encrypted-media"
+                              className="absolute -left-2 -top-2"
+                            ></iframe>
+                          ) : (
+                            <div className="w-full h-full flex items-center justify-center text-[10px] text-stone-400 text-center p-1 leading-tight">需要 Track URL</div>
+                          )}
                         </div>
                         <div className="flex-1 min-w-0">
                           <h4 className="font-semibold text-base truncate">{track.title}</h4>
@@ -145,7 +149,8 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
                           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.299 1.02zm1.44-3.3c-.301.42-.84.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.6.18-1.2.72-1.38 4.2-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.539-1.56.299z"/></svg>
                         </a>
                       </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 </div>
 
@@ -155,13 +160,28 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
                     Top Albums 專輯排行
                   </h3>
                   <div className="flex flex-col gap-4">
-                    {musicCharts.albums.map((album, idx) => (
+                    {musicCharts.albums.map((album, idx) => {
+                      const isSpotifyLink = album.spotifyUrl.includes('/album/');
+                      const embedUrl = isSpotifyLink ? album.spotifyUrl.replace('/album/', '/embed/album/').split('?')[0] : '';
+
+                      return (
                       <div key={album.id} className="p-4 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded flex gap-4 items-center shadow-sm hover:shadow-md dark:shadow-stone-900 transition-shadow">
-                        <div className="w-6 font-serif italic text-xl text-stone-300 dark:text-stone-600 flex items-center justify-center shrink-0">
+                        <div className="w-6 font-sans font-medium italic text-xl text-stone-300 dark:text-stone-600 flex items-center justify-center shrink-0 lining-nums">
                           {idx + 1}
                         </div>
-                        <div className="w-12 h-12 shrink-0 bg-stone-200 dark:bg-stone-800 overflow-hidden rounded border border-stone-200 dark:border-stone-700 shadow-sm">
-                          <img src={album.coverImage} alt={album.title} className="w-full h-full object-cover" />
+                        <div className="w-[64px] h-[64px] shrink-0 bg-stone-200 dark:bg-stone-800 overflow-hidden rounded border border-stone-200 dark:border-stone-700 shadow-sm relative pointer-events-none">
+                          {embedUrl ? (
+                            <iframe 
+                              src={embedUrl} 
+                              width="300" 
+                              height="80" 
+                              frameBorder="0" 
+                              allow="encrypted-media"
+                              className="absolute -left-2 -top-2"
+                            ></iframe>
+                          ) : (
+                            <div className="w-full h-full flex items-center justify-center text-[10px] text-stone-400 text-center p-1 leading-tight">需要 Album URL</div>
+                          )}
                         </div>
                         <div className="flex-1 min-w-0">
                           <h4 className="font-semibold text-base truncate">{album.title}</h4>
@@ -177,7 +197,8 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
                           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.299 1.02zm1.44-3.3c-.301.42-.84.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.6.18-1.2.72-1.38 4.2-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.539-1.56.299z"/></svg>
                         </a>
                       </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 </div>
               </div>
