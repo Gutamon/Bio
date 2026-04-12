@@ -16,6 +16,7 @@ export interface CodeProject {
 export interface FashionArtwork {
   id: string;
   title: string;
+  description?: string;
   image: string;
   video: string;
 }
@@ -42,24 +43,10 @@ export interface MusicData {
 
 // Code 專案讀取
 export function getCodeProjects(): CodeProject[] {
-  const dir = path.join(contentDir, 'code');
-  if (!fs.existsSync(dir)) return [];
-  const files = fs.readdirSync(dir);
-  return files
-    .filter((file) => file.endsWith('.mdx'))
-    .map((file) => {
-      const filePath = path.join(dir, file);
-      const fileContent = fs.readFileSync(filePath, 'utf-8');
-      const { data, content } = matter(fileContent);
-      return {
-        slug: file.replace('.mdx', ''),
-        title: data.title || 'Untitled',
-        description: data.description || '',
-        tags: data.tags || [],
-        githubUrl: data.githubUrl || '',
-        content,
-      };
-    });
+  const filePath = path.join(contentDir, 'code', 'data.json');
+  if (!fs.existsSync(filePath)) return [];
+  const fileContent = fs.readFileSync(filePath, 'utf-8');
+  return JSON.parse(fileContent);
 }
 
 // Fashion 專案讀取 (可基於 JSON 或是圖片路徑)

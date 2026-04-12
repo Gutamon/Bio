@@ -2,38 +2,38 @@
   {
     "id": "\"25",
     "title": "\"25: Solstice Zest",
-    "description": "Exploration of modern minimalism and utilitarian shapes.",
-    "coverImage": "https://picsum.photos/seed/fashion_cover_1/800/800",
+    "description": "在季節轉彎的地方 雛菊 檀香",
+    "coverImage": "/Bio/fashion/25/25 cover.jpg",
     "artworks": [
-      { "id": "25-1", "title": "Look 1", "image": "https://picsum.photos/seed/fashion25_1/800/1000", "video": "https://drive.google.com/file/d/1guKGa55azBVIgjDFg3IEilCnCZfAbZQO/preview" },
-      { "id": "25-2", "title": "Look 2", "image": "https://picsum.photos/seed/fashion25_2/800/1000", "video": "https://drive.google.com/file/d/1Z7anv9vbet9T0S78T-zsqIihJc5PrPq4/view?usp=drive_link" },
-      { "id": "25-3", "title": "Look 3", "image": "https://picsum.photos/seed/fashion25_3/800/1000", "video": "https://drive.google.com/file/d/10guF5YnIxB8mMPi44MFZBIivq4ltERue/view?usp=drive_link" },
-      { "id": "25-4", "title": "Look 4", "image": "https://picsum.photos/seed/fashion25_4/800/1000", "video": "https://drive.google.com/file/d/1zpPZi3Q8xVnBU1g3msWOt5BOBkqml5rn/view?usp=drive_link" },
-      { "id": "25-5", "title": "Look 5", "image": "https://picsum.photos/seed/fashion25_5/800/1000", "video": "https://drive.google.com/file/d/1LGdXs_HjLgJa281c_oBKYbVsR3redpM-/view?usp=drive_link" },
-      { "id": "25-6", "title": "Look 6", "image": "https://picsum.photos/seed/fashion25_6/800/1000", "video": "https://drive.google.com/file/d/1S2MkDCgJN1X0KkDA_7AQo439G0i-Ll_6/view?usp=drive_link" },
-      { "id": "25-7", "title": "Look 7", "image": "https://picsum.photos/seed/fashion25_7/800/1000", "video": "https://drive.google.com/file/d/1bTnpoDFqYQ2su9BDounJOMzIYwJfmkaa/view?usp=drive_link" },
-      { "id": "25-8", "title": "Look 8", "image": "https://picsum.photos/seed/fashion25_8/800/1000", "video": "https://drive.google.com/file/d/1UadKoMxZGTMdQiCHPliLIP1VkYT-OQ6n/view?usp=drive_link" },
-      { "id": "25-9", "title": "Look 9", "image": "https://picsum.photos/seed/fashion25_9/800/1000", "video": "https://drive.google.com/file/d/1OmzZ5F9vNXmIpvCHkM-GXm6qvqgS0nOK/view?usp=drive_link" },
-      { "id": "25-10", "title": "Look 10", "image": "https://picsum.photos/seed/fashion25_10/800/1000", "video": "https://drive.google.com/file/d/1kwKCxNIWwUEVG5gIfQpyR8p073wbegS1/view?usp=drive_link" }
+      { "id": "25-1", "title": "", "image": "https://picsum.photos/seed/fashion25_1/800/1000", "video": "/Bio/fashion/25/25-1.mp4" },
+      { "id": "25-2", "title": "Look 2", "image": "https://picsum.photos/seed/fashion25_2/800/1000", "video": "/Bio/fashion/25/25-2.mov" },
+      { "id": "25-3", "title": "Look 3", "image": "https://picsum.photos/seed/fashion25_3/800/1000", "video": "/Bio/fashion/25/25-3.mov" },
+      { "id": "25-4", "title": "Look 4", "image": "https://picsum.photos/seed/fashion25_4/800/1000", "video": "/Bio/fashion/25/25-4.mp4" },
+      { "id": "25-5", "title": "Look 5", "image": "https://picsum.photos/seed/fashion25_5/800/1000", "video": "/Bio/fashion/25/25-5.mov" },
+      { "id": "25-6", "title": "Look 6", "image": "https://picsum.photos/seed/fashion25_6/800/1000", "video": "/Bio/fashion/25/25-6.mp4" },
+      { "id": "25-7", "title": "Look 7", "image": "https://picsum.photos/seed/fashion25_7/800/1000", "video": "/Bio/fashion/25/25-7.mov" },
+      { "id": "25-8", "title": "Look 8", "image": "https://picsum.photos/seed/fashion25_8/800/1000", "video": "/Bio/fashion/25/25-8.mov" },
+      { "id": "25-9", "title": "Look 9", "image": "https://picsum.photos/seed/fashion25_9/800/1000", "video": "/Bio/fashion/25/25-9.mov" },
+      { "id": "25-10", "title": "Look 10", "image": "https://picsum.photos/seed/fashion25_10/800/1000", "video": "/Bio/fashion/25/25-10.mov" }
     ]
   },
   {
     "id": "\"24",
     "title": "\"24: Contours Libérés",
-    "description": "A study in dark aesthetics and heavy draping.",
-    "coverImage": "https://picsum.photos/seed/fashion_cover_2/800/800",
+    "description": "輪廓是刻意的雕塑 卻也是為了成就一場身體流線的自由盛開",
+    "coverImage": "/Bio/fashion/24/24 cover.png",
     "artworks": [
-      { "id": "24-1", "title": "Cat Girl", "image": "https://picsum.photos/seed/fashion24_1/800/1000", "video": "https://drive.google.com/file/d/1utVZzfCp8f7Aq9efvqMQXyAUoL3GQ20V/preview" },
-      { "id": "24-2", "title": "Look 2", "image": "https://picsum.photos/seed/fashion24_2/800/1000", "video": "https://drive.google.com/file/d/1yV2BKyPFcM6HmBrSHIKS8wh2tlCpN9Vn/view?usp=drive_link" },
-      { "id": "24-3", "title": "Look 3", "image": "https://picsum.photos/seed/fashion24_3/800/1000", "video": "https://drive.google.com/file/d/1ryZ3Med-RSskfBieOBhCundSc5u3JAkY/view?usp=drive_link" },
-      { "id": "24-4", "title": "Look 4", "image": "https://picsum.photos/seed/fashion24_4/800/1000", "video": "https://drive.google.com/file/d/1J58VqApmpcNthtztmEvJYDu8WCjqWYnF/view?usp=drive_link" },
-      { "id": "24-5", "title": "Look 5", "image": "https://picsum.photos/seed/fashion24_5/800/1000", "video": "https://drive.google.com/file/d/124moKLf1AnzxbUXAzrc3sRlb0FiDcu6U/view?usp=drive_link" },
-      { "id": "24-6", "title": "Look 6", "image": "https://picsum.photos/seed/fashion24_6/800/1000", "video": "https://drive.google.com/file/d/1SZcUyr---XeOPsTUHexGjkBMXGk6riBQ/view?usp=sharing" },
-      { "id": "24-7", "title": "Look 7", "image": "https://picsum.photos/seed/fashion24_7/800/1000", "video": "https://drive.google.com/file/d/1YvWT8iSJyyYQt5UQkmdhQF2Zqw-yJcUP/view?usp=drive_link" },
-      { "id": "24-8", "title": "Look 8", "image": "https://picsum.photos/seed/fashion24_8/800/1000", "video": "https://drive.google.com/file/d/14xEwMBsTOympN8eUCRDFIL44OYUo6c1j/view?usp=drive_link" },
-      { "id": "24-9", "title": "Look 9", "image": "https://picsum.photos/seed/fashion24_9/800/1000", "video": "https://drive.google.com/file/d/1w2j25BimqVJtUIh_msiO4piGu5bNmFSF/view?usp=drive_link" },
-      { "id": "24-10", "title": "Look 10", "image": "https://picsum.photos/seed/fashion24_10/800/1000", "video": "https://drive.google.com/file/d/1X9Wqx3brcNia1-TQzv1xx0WE8YEJmKQx/view?usp=sharing" },
-      { "id": "24-11", "title": "Look 11", "image": "https://picsum.photos/seed/fashion24_11/800/1000", "video": "https://drive.google.com/file/d/1bOktsO-I3ZvznCyMVzh2zXfFIgu8e-ZQ/view?usp=drive_link" }
+      { "id": "24-1", "title": "Cat Girl", "image": "https://picsum.photos/seed/fashion24_1/800/1000", "video": "/Bio/fashion/24/24-1.mov" },
+      { "id": "24-2", "title": "Look 2", "image": "https://picsum.photos/seed/fashion24_2/800/1000", "video": "/Bio/fashion/24/24-2.mov" },
+      { "id": "24-3", "title": "Look 3", "image": "https://picsum.photos/seed/fashion24_3/800/1000", "video": "/Bio/fashion/24/24-3.mov" },
+      { "id": "24-4", "title": "Look 4", "image": "https://picsum.photos/seed/fashion24_4/800/1000", "video": "/Bio/fashion/24/24-4.mov" },
+      { "id": "24-5", "title": "Look 5", "image": "https://picsum.photos/seed/fashion24_5/800/1000", "video": "/Bio/fashion/24/24-5.mov" },
+      { "id": "24-6", "title": "Look 6", "image": "https://picsum.photos/seed/fashion24_6/800/1000", "video": "/Bio/fashion/24/24-6.mov" },
+      { "id": "24-7", "title": "Look 7", "image": "https://picsum.photos/seed/fashion24_7/800/1000", "video": "/Bio/fashion/24/24-7.mov" },
+      { "id": "24-8", "title": "Look 8", "image": "https://picsum.photos/seed/fashion24_8/800/1000", "video": "/Bio/fashion/24/24-8.mov" },
+      { "id": "24-9", "title": "Look 9", "image": "https://picsum.photos/seed/fashion24_9/800/1000", "video": "/Bio/fashion/24/24-9.mov" },
+      { "id": "24-10", "title": "Look 10", "image": "https://picsum.photos/seed/fashion24_10/800/1000", "video": "/Bio/fashion/24/24-10.mov" },
+      { "id": "24-11", "title": "Look 11", "image": "https://picsum.photos/seed/fashion24_11/800/1000", "video": "/Bio/fashion/24/24-11.mov" }
     ]
   }
 ]

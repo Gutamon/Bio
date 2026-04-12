@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import LayoutContainer from '@/components/LayoutContainer';
@@ -15,7 +15,25 @@ interface HomeClientProps {
 }
 
 export default function HomeClient({ codeProjects, fashionCollections, musicCharts }: HomeClientProps) {
-  const [activeTab, setActiveTab] = useState('code');
+  const [activeTab, setActiveTabState] = useState('code');
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
+
+  const allTags = Array.from(new Set(codeProjects.flatMap(p => p.tags)));
+  const filteredProjects = selectedTag 
+    ? codeProjects.filter(p => p.tags.includes(selectedTag))
+    : codeProjects;
+
+  useEffect(() => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash === 'code' || hash === 'fashion' || hash === 'music') {
+      setActiveTabState(hash);
+    }
+  }, []);
+
+  const setActiveTab = (tab: string) => {
+    setActiveTabState(tab);
+    window.history.pushState(null, '', `#${tab}`);
+  };
 
   return (
     <LayoutContainer>
@@ -36,8 +54,27 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
               <h2 className="font-mono text-3xl mb-8 tracking-wide">程式專案 (Code)</h2>
+              
+              <div className="flex flex-wrap gap-2 mb-8">
+                <button 
+                  onClick={() => setSelectedTag(null)}
+                  className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${!selectedTag ? 'bg-stone-900 text-stone-100 dark:bg-stone-100 dark:text-stone-900' : 'bg-stone-100 text-stone-600 dark:bg-stone-800 dark:text-stone-400 hover:bg-stone-200 dark:hover:bg-stone-700'}`}
+                >
+                  All
+                </button>
+                {allTags.map(tag => (
+                  <button 
+                    key={tag}
+                    onClick={() => setSelectedTag(tag)}
+                    className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${selectedTag === tag ? 'bg-stone-900 text-stone-100 dark:bg-stone-100 dark:text-stone-900' : 'bg-stone-100 text-stone-600 dark:bg-stone-800 dark:text-stone-400 hover:bg-stone-200 dark:hover:bg-stone-700'}`}
+                  >
+                    {tag}
+                  </button>
+                ))}
+              </div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {codeProjects.map(project => (
+                {filteredProjects.map(project => (
                   <div key={project.slug} className="p-6 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded hover:shadow-xl dark:hover:shadow-stone-800/30 transition-all duration-300 group">
                     <h3 className="font-serif text-2xl font-semibold mb-2 text-stone-900 dark:text-stone-100">{project.title}</h3>
                     <p className="text-stone-600 dark:text-stone-400 mb-6 text-sm leading-relaxed">{project.description}</p>
@@ -78,8 +115,6 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
                   <Link 
                     key={collection.id} 
                     href={`/fashion/${index}`} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
                     className="group block relative aspect-square bg-stone-100 dark:bg-stone-800 rounded overflow-hidden shadow-sm hover:shadow-xl dark:shadow-stone-900/50 transition-all"
                   >
                     <img src={collection.coverImage} alt={collection.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -121,7 +156,7 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
                         <div className="w-6 font-sans font-medium italic text-xl text-stone-300 dark:text-stone-600 flex items-center justify-center shrink-0 lining-nums">
                           {idx + 1}
                         </div>
-                        <div className="w-[64px] h-[64px] shrink-0 bg-stone-200 dark:bg-stone-800 overflow-hidden rounded border border-stone-200 dark:border-stone-700 shadow-sm relative pointer-events-none">
+                        <div className="w-[64px] h-[64px] shrink-0 bg-stone-200 dark:bg-stone-800 overflow-hidden rounded-md border border-stone-200 dark:border-stone-700 shadow-sm relative pointer-events-none">
                           {embedUrl ? (
                             <iframe 
                               src={embedUrl} 
@@ -169,7 +204,7 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
                         <div className="w-6 font-sans font-medium italic text-xl text-stone-300 dark:text-stone-600 flex items-center justify-center shrink-0 lining-nums">
                           {idx + 1}
                         </div>
-                        <div className="w-[64px] h-[64px] shrink-0 bg-stone-200 dark:bg-stone-800 overflow-hidden rounded border border-stone-200 dark:border-stone-700 shadow-sm relative pointer-events-none">
+                        <div className="w-[64px] h-[64px] shrink-0 bg-stone-200 dark:bg-stone-800 overflow-hidden rounded-md border border-stone-200 dark:border-stone-700 shadow-sm relative pointer-events-none">
                           {embedUrl ? (
                             <iframe 
                               src={embedUrl} 
