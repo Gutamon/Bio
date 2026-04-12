@@ -3,7 +3,7 @@
     "id": "\"25",
     "title": "\"25: Solstice Zest",
     "description": "在季節轉彎的地方 雛菊 檀香",
-    "coverImage": "/Bio/fashion/25/25%20cover.jpg",
+    "coverImage": "/Bio/fashion/25/25_cover.jpg",
     "artworks": [
       { "id": "25-1", "title": "", "image": "https://picsum.photos/seed/fashion25_1/800/1000", "video": "/Bio/fashion/25/25-1.MP4" },
       { "id": "25-2", "title": "Look 2", "image": "https://picsum.photos/seed/fashion25_2/800/1000", "video": "/Bio/fashion/25/25-2.mov" },
@@ -21,7 +21,7 @@
     "id": "\"24",
     "title": "\"24: Contours Libérés",
     "description": "輪廓是刻意的雕塑 卻也是為了成就一場身體流線的自由盛開",
-    "coverImage": "/Bio/fashion/24/24%20cover.png",
+    "coverImage": "/Bio/fashion/24/24_cover.png",
     "artworks": [
       { "id": "24-1", "title": "Cat Girl", "image": "https://picsum.photos/seed/fashion24_1/800/1000", "video": "/Bio/fashion/24/24-1.mov" },
       { "id": "24-2", "title": "Look 2", "image": "https://picsum.photos/seed/fashion24_2/800/1000", "video": "/Bio/fashion/24/24-2.mov" },
