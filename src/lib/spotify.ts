@@ -38,8 +38,8 @@ async function fetchWebApi(endpoint: string, method: string, body?: any) {
     },
     method,
     body: body ? JSON.stringify(body) : undefined,
-    // 移除快取讓它每次重整都拿最新內容 (因為在 page.tsx 已經有控制快取了)
-    cache: 'no-store'
+    // 為相容 GitHub Pages 的純靜態匯出功能，此處移除 cache: 'no-store'，
+    // 讓 Next.js 在 build 的當下把結果快取起來編成純靜態網頁
   });
   
   if (!res.ok) {
