@@ -199,8 +199,11 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3, ease: 'easeInOut' }}
                       >
-                        <div className="p-6 border-t border-stone-200 dark:border-stone-800">
+                        <div className="py-6 border-t border-stone-200 dark:border-stone-800">
                           <div className="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                            {/* 開頭 Spacer 幫助第一個影片置中 */}
+                            <div className="w-[calc(50%-30vw-12px)] sm:w-[calc(50%-120px-12px)] shrink-0" aria-hidden="true" />
+                            
                             {weeklyRecaps.map(recap => {
                               return (
                               <div key={recap.id} className="w-[60vw] sm:w-[240px] shrink-0 snap-center bg-stone-100 dark:bg-stone-800 rounded-2xl overflow-hidden flex flex-col group shadow-sm hover:shadow-xl dark:shadow-stone-900/50 transition-all border border-stone-200 dark:border-stone-700">
@@ -213,6 +216,9 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
                                 </div>
                               </div>
                             )})}
+
+                            {/* 結尾 Spacer 幫助最後一個影片置中 */}
+                            <div className="w-[calc(50%-30vw-12px)] sm:w-[calc(50%-120px-12px)] shrink-0" aria-hidden="true" />
                           </div>
                         </div>
                       </motion.div>
