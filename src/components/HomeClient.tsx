@@ -203,12 +203,11 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
                           <div className="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                             {weeklyRecaps.map(recap => {
                               return (
-                              <div key={recap.id} className="w-[75vw] sm:w-[320px] shrink-0 snap-center bg-stone-100 dark:bg-stone-800 rounded-2xl overflow-hidden flex flex-col group shadow-sm hover:shadow-xl dark:shadow-stone-900/50 transition-all border border-stone-200 dark:border-stone-700">
+                              <div key={recap.id} className="w-[60vw] sm:w-[240px] shrink-0 snap-center bg-stone-100 dark:bg-stone-800 rounded-2xl overflow-hidden flex flex-col group shadow-sm hover:shadow-xl dark:shadow-stone-900/50 transition-all border border-stone-200 dark:border-stone-700">
                                 <div className="relative aspect-[9/16] overflow-hidden">
                                   <InteractiveVideo src={recap.videoUrl} />
                                 </div>
-                                <div className="p-5 flex flex-col gap-1.5 bg-white dark:bg-stone-900 flex-1 border-t border-stone-100 dark:border-stone-800">
-                                  <span className="text-[11px] font-mono font-bold text-amber-600 dark:text-amber-500 uppercase tracking-[0.2em]">{recap.week}</span>
+                                <div className="p-3 flex flex-col gap-1.5 bg-white dark:bg-stone-900 flex-1 border-t border-stone-100 dark:border-stone-800">
                                   <h3 className="font-serif text-lg font-bold dark:text-white leading-tight">{recap.title}</h3>
                                   <p className="text-xs text-stone-500 dark:text-stone-400 mt-auto pt-2">{recap.date}</p>
                                 </div>

@@ -17,10 +17,10 @@ export default function ProfileHeader() {
       {/* Bio Details */}
       <div className="flex flex-col text-center md:text-left">
         <h1 className="font-serif text-4xl md:text-5xl font-bold text-stone-900 dark:text-stone-100 tracking-tight">Frank Sun</h1>
-        <p className="text-stone-500 dark:text-stone-400 mt-2 font-medium tracking-wide text-sm uppercase">Creative Developer & Designer</p>
+        <p className="text-stone-500 dark:text-stone-400 mt-2 font-medium tracking-wide text-sm uppercase">應用開發 美學創作 音樂生活</p>
 
         <p className="mt-4 text-stone-700 dark:text-stone-300 leading-relaxed text-sm md:text-base">
-          Crafting digital experiences at the intersection of design and engineering. Exploring code, fashion, and curated soundscapes.
+          Frank x Gutamon
         </p>
 
         <div className="flex gap-5 mt-6 justify-center md:justify-start text-stone-400 dark:text-stone-500">
