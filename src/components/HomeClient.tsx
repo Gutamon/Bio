@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import LayoutContainer from '@/components/LayoutContainer';
@@ -22,6 +22,14 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
     weekly: true,
     top: true
   });
+
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scrollByAmount = (amount: number) => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: amount, behavior: 'smooth' });
+    }
+  };
 
   const toggleSection = (section: 'weekly' | 'top') => {
     setOpenSections(prev => ({ ...prev, [section]: !prev[section] }));
@@ -64,7 +72,7 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
       
       <StickyTabs activeTab={activeTab} setActiveTab={setActiveTab} />
 
-      <section className="max-w-5xl mx-auto py-16 px-6 min-h-[60vh]">
+      <section className="max-w-5xl mx-auto pt-8 pb-16 px-6 min-h-[60vh]">
         <AnimatePresence mode="wait">
           {activeTab === 'code' && (
             <motion.div
@@ -74,7 +82,7 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
-              <h2 className="font-mono text-3xl mb-8 tracking-wide">程式專案 (Code)</h2>
+              <h2 className="font-mono text-3xl mb-8 tracking-wide">程式專案</h2>
               
               <div className="flex flex-wrap gap-2 mb-8">
                 <button 
@@ -144,7 +152,7 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
-              <h2 className="font-mono text-3xl mb-8 tracking-wide">服裝設計專題<br></br>(Fashion Projects)</h2>
+              <h2 className="font-mono text-3xl mb-8 tracking-wide">服裝設計專題</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 {fashionCollections.map((collection, index) => (
                   <Link 
@@ -199,8 +207,18 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3, ease: 'easeInOut' }}
                       >
-                        <div className="py-6 border-t border-stone-200 dark:border-stone-800">
-                          <div className="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                        <div className="relative py-6 border-t border-stone-200 dark:border-stone-800 group/slider">
+                          {weeklyRecaps.length > 1 && (
+                            <button 
+                              onClick={() => scrollByAmount(-264)} 
+                              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 dark:bg-stone-800/90 backdrop-blur shadow-md items-center justify-center text-stone-700 dark:text-stone-300 opacity-0 group-hover/slider:opacity-100 transition-opacity hover:scale-105 active:scale-95 hidden sm:flex border border-stone-200 dark:border-stone-700"
+                              aria-label="Scroll left"
+                            >
+                              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                            </button>
+                          )}
+
+                          <div ref={scrollContainerRef} className="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                             {/* 開頭 Spacer 幫助第一個影片置中 */}
                             <div className="w-[calc(50%-30vw-12px)] sm:w-[calc(50%-120px-12px)] shrink-0" aria-hidden="true" />
                             
@@ -220,6 +238,16 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
                             {/* 結尾 Spacer 幫助最後一個影片置中 */}
                             <div className="w-[calc(50%-30vw-12px)] sm:w-[calc(50%-120px-12px)] shrink-0" aria-hidden="true" />
                           </div>
+
+                          {weeklyRecaps.length > 1 && (
+                            <button 
+                              onClick={() => scrollByAmount(264)} 
+                              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 dark:bg-stone-800/90 backdrop-blur shadow-md items-center justify-center text-stone-700 dark:text-stone-300 opacity-0 group-hover/slider:opacity-100 transition-opacity hover:scale-105 active:scale-95 hidden sm:flex border border-stone-200 dark:border-stone-700"
+                              aria-label="Scroll right"
+                            >
+                              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                            </button>
+                          )}
                         </div>
                       </motion.div>
                     )}

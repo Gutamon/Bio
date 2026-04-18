@@ -115,6 +115,9 @@ export default function InteractiveVideo({ src }: { src: string }) {
     return () => {
       videoObserver?.unobserve(video);
       visibleVideos.delete(video);
+      if (!video.paused) {
+        video.pause();
+      }
       evaluatePlayingVideo(); // 當這支影片被卸載，重新評估剩下的影片
     };
   }, []);
