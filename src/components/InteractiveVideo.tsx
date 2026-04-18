@@ -139,13 +139,17 @@ export default function InteractiveVideo({ src }: { src: string }) {
     <div className="relative w-full h-full overflow-hidden group/video cursor-pointer bg-black/5 dark:bg-black/40" onClick={toggleMute}>
       <video 
         ref={videoRef}
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover rendering-intent-performance"
         loop
         playsInline
+        webkit-playsinline="true"
+        x5-playsinline="true"
         muted={isMuted}
-        preload="metadata"
+        preload="auto"
+        disablePictureInPicture
+        controlsList="nodownload"
       >
-        <source src={src} type="video/mp4" />
+        <source src={`${src}#t=0.001`} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <button 
