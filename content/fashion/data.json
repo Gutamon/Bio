@@ -23,17 +23,17 @@
     "description": "輪廓是身體的雕塑 成就自由的盛開",
     "coverImage": "/Bio/fashion/24/24_cover.png",
     "artworks": [
-      { "id": "24-1", "title": "Cat Girl", "image": "https://picsum.photos/seed/fashion24_1/800/1000", "video": "/Bio/fashion/24/24-1.mov" },
-      { "id": "24-2", "title": "Look 2", "image": "https://picsum.photos/seed/fashion24_2/800/1000", "video": "/Bio/fashion/24/24-2.mov" },
-      { "id": "24-3", "title": "Look 3", "image": "https://picsum.photos/seed/fashion24_3/800/1000", "video": "/Bio/fashion/24/24-3.mov" },
-      { "id": "24-4", "title": "Look 4", "image": "https://picsum.photos/seed/fashion24_4/800/1000", "video": "/Bio/fashion/24/24-4.mov" },
-      { "id": "24-5", "title": "Look 5", "image": "https://picsum.photos/seed/fashion24_5/800/1000", "video": "/Bio/fashion/24/24-5.mov" },
-      { "id": "24-6", "title": "Look 6", "image": "https://picsum.photos/seed/fashion24_6/800/1000", "video": "/Bio/fashion/24/24-6.mov" },
-      { "id": "24-7", "title": "Look 7", "image": "https://picsum.photos/seed/fashion24_7/800/1000", "video": "/Bio/fashion/24/24-7.mov" },
-      { "id": "24-8", "title": "Look 8", "image": "https://picsum.photos/seed/fashion24_8/800/1000", "video": "/Bio/fashion/24/24-8.mov" },
-      { "id": "24-9", "title": "Look 9", "image": "https://picsum.photos/seed/fashion24_9/800/1000", "video": "/Bio/fashion/24/24-9.mov" },
-      { "id": "24-10", "title": "Look 10", "image": "https://picsum.photos/seed/fashion24_10/800/1000", "video": "/Bio/fashion/24/24-10.mov" },
-      { "id": "24-11", "title": "Look 11", "image": "https://picsum.photos/seed/fashion24_11/800/1000", "video": "/Bio/fashion/24/24-11.mov" }
+      { "id": "24-1", "title": "Cat Girl", "video": "/Bio/fashion/24/24-1.mov" },
+      { "id": "24-2", "title": "Look 2", "video": "/Bio/fashion/24/24-2.mov" },
+      { "id": "24-3", "title": "Look 3", "video": "/Bio/fashion/24/24-3.mov" },
+      { "id": "24-4", "title": "Look 4", "video": "/Bio/fashion/24/24-4.mov" },
+      { "id": "24-5", "title": "Look 5", "video": "/Bio/fashion/24/24-5.mov" },
+      { "id": "24-6", "title": "Look 6", "video": "/Bio/fashion/24/24-6.mov" },
+      { "id": "24-7", "title": "Look 7", "video": "/Bio/fashion/24/24-7.mov" },
+      { "id": "24-8", "title": "Look 8", "video": "/Bio/fashion/24/24-8.mov" },
+      { "id": "24-9", "title": "Look 9", "video": "/Bio/fashion/24/24-9.mov" },
+      { "id": "24-10", "title": "Look 10", "video": "/Bio/fashion/24/24-10.mov" },
+      { "id": "24-11", "title": "Look 11", "video": "/Bio/fashion/24/24-11.mov" }
     ]
   }
 ]

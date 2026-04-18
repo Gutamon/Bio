@@ -1,6 +1,7 @@
 import { getFashionCollections } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import InteractiveVideo from '@/components/InteractiveVideo';
 
 export function generateStaticParams() {
   const collections = getFashionCollections();
@@ -42,25 +43,8 @@ export default async function FashionProjectPage({ params }: { params: Promise<{
               
               <div className="flex flex-col md:flex-row gap-6 md:gap-12 w-full justify-center items-center">
                 <div className="h-[45vh] md:h-[60vh] aspect-[9/16] bg-stone-100 dark:bg-stone-800 rounded overflow-hidden shadow-md shrink-0">
-                  <img src={artwork.image} alt={artwork.title} className="w-full h-full object-cover" />
-                </div>
-                
-                {artwork.description && (
-                  <div className="flex-1 w-full max-w-sm px-2 text-center md:text-left">
-                    <p className="text-stone-600 dark:text-stone-300 text-base leading-relaxed">{artwork.description}</p>
-                  </div>
-                )}
-                
-                <div className="h-[45vh] md:h-[60vh] aspect-[9/16] bg-stone-100 dark:bg-stone-800 rounded overflow-hidden shadow-md shrink-0">
                   {artwork.video ? (
-                    <video 
-                      src={artwork.video} 
-                      className="w-full h-full object-cover"
-                      autoPlay 
-                      muted 
-                      loop 
-                      playsInline
-                    />
+                    <InteractiveVideo src={artwork.video} />
                   ) : (
                      <div className="w-full h-full flex items-center justify-center text-stone-400 text-sm tracking-wider">NO VIDEO SOURCE</div>
                   )}
