@@ -10,6 +10,7 @@ export interface CodeProject {
   description: string;
   tags: string[];
   githubUrl?: string;
+  coverImage?: string;
   content: string;
 }
 
@@ -43,10 +44,45 @@ export interface MusicData {
 
 // Code 專案讀取
 export function getCodeProjects(): CodeProject[] {
-  const filePath = path.join(contentDir, 'code', 'data.json');
-  if (!fs.existsSync(filePath)) return [];
+  const codeDir = path.join(contentDir, 'code');
+  if (!fs.existsSync(codeDir)) return [];
+  
+  const files = fs.readdirSync(codeDir).filter(f => f.endsWith('.mdx'));
+  
+  return files.map(filename => {
+    const filePath = path.join(codeDir, filename);
+    const fileContent = fs.readFileSync(filePath, 'utf-8');
+    const { data } = matter(fileContent);
+    
+    return {
+      slug: filename.replace(/\.mdx$/, ''),
+      title: data.title || '',
+      description: data.description || '',
+      tags: data.tags || [],
+      githubUrl: data.githubUrl || '',
+      coverImage: data.coverImage || '',
+      content: '' // 列表頁不需要完整 content，節省效能
+    };
+  });
+}
+
+// 取得單個專案詳細資料
+export function getCodeProjectBySlug(slug: string): CodeProject | null {
+  const filePath = path.join(contentDir, 'code', `${slug}.mdx`);
+  if (!fs.existsSync(filePath)) return null;
+  
   const fileContent = fs.readFileSync(filePath, 'utf-8');
-  return JSON.parse(fileContent);
+  const { data, content } = matter(fileContent);
+  
+  return {
+    slug,
+    title: data.title || '',
+    description: data.description || '',
+    tags: data.tags || [],
+    githubUrl: data.githubUrl || '',
+    coverImage: data.coverImage || '',
+    content
+  };
 }
 
 // Fashion 專案讀取 (可基於 JSON 或是圖片路徑)

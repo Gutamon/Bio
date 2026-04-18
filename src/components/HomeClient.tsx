@@ -73,28 +73,42 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
                 ))}
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 {filteredProjects.map(project => (
-                  <div key={project.slug} className="p-6 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded hover:shadow-xl dark:hover:shadow-stone-800/30 transition-all duration-300 group">
-                    <h3 className="font-serif text-2xl font-semibold mb-2 text-stone-900 dark:text-stone-100">{project.title}</h3>
-                    <p className="text-stone-600 dark:text-stone-400 mb-6 text-sm leading-relaxed">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {project.tags.map(tag => (
-                        <span key={tag} className="text-xs font-medium tracking-wide text-stone-500 dark:text-stone-400 bg-stone-100 dark:bg-stone-800 px-3 py-1 rounded-full uppercase">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    {project.githubUrl && (
-                      <a 
-                        href={project.githubUrl} 
-                        target="_blank" 
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide border-b border-stone-300 dark:border-stone-600 hover:border-stone-900 dark:hover:border-stone-200 pb-1 transition-colors"
-                      >
-                        VIEW ON GITHUB
-                      </a>
+                  <div 
+                    key={project.slug} 
+                    className="relative block group bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded overflow-hidden hover:shadow-xl dark:hover:shadow-stone-800/30 transition-all duration-500 flex flex-col"
+                  >
+                    {project.coverImage && (
+                      <div className="w-full h-48 overflow-hidden bg-stone-100 dark:bg-stone-800 relative">
+                        <img 
+                          src={project.coverImage} 
+                          alt={project.title} 
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 pointer-events-none"
+                        />
+                      </div>
                     )}
+                    <div className="p-6 flex flex-col flex-grow relative z-20">
+                      <h3 className="font-serif text-2xl font-semibold mb-3 text-stone-900 dark:text-stone-100 group-hover:text-amber-600 transition-colors">{project.title}</h3>
+                      <p className="text-stone-600 dark:text-stone-400 mb-6 text-sm leading-relaxed flex-grow">{project.description}</p>
+                      
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.tags.map(tag => (
+                          <span key={tag} className="text-xs font-medium tracking-wide text-stone-500 dark:text-stone-400 bg-stone-100 dark:bg-stone-800 px-3 py-1 rounded-full uppercase">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      
+                      <div className="mt-auto flex justify-between items-center bg-stone-50 dark:bg-stone-800/50 -mx-6 -mb-6 px-6 py-4 border-t border-stone-100 dark:border-stone-800">
+                        <Link 
+                          href={`/code/${project.slug}`}
+                          className="text-sm font-medium tracking-wide text-stone-900 dark:text-stone-100 uppercase flex items-center gap-2 group-hover:gap-3 hover:text-amber-600 dark:hover:text-amber-500 transition-all"
+                        >
+                          READ MORE <span className="text-lg">→</span>
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -109,7 +123,7 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
-              <h2 className="font-mono text-3xl mb-8 tracking-wide">服裝設計專題 (Fashion Projects)</h2>
+              <h2 className="font-mono text-3xl mb-8 tracking-wide">服裝設計專題<br></br>(Fashion Projects)</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 {fashionCollections.map((collection, index) => (
                   <Link 

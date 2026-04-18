@@ -3,9 +3,9 @@
 import { motion } from 'framer-motion';
 
 const tabs = [
-  { id: 'code', label: '程式 Code' },
-  { id: 'fashion', label: '服裝 Fashion' },
-  { id: 'music', label: '音樂 Music' }
+  { id: 'code', label: 'Code' },
+  { id: 'fashion', label: 'Fashion' },
+  { id: 'music', label: 'MineBoard' }
 ];
 
 export default function StickyTabs({ activeTab, setActiveTab }: { activeTab: string, setActiveTab: (id: string) => void }) {
