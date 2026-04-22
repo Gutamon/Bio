@@ -20,11 +20,11 @@ const REFRESH_TOKEN = process.env.SPOTIFY_REFRESH_TOKEN;
 
 // ── 驗證環境變數 ────────────────────────────────────────────────────────────
 if (!CLIENT_ID || !CLIENT_SECRET || !REFRESH_TOKEN) {
-  console.error('❌ 缺少必要的 Spotify 環境變數：');
-  console.error(`   SPOTIFY_CLIENT_ID     : ${CLIENT_ID ? '✓' : '✗ 未設定'}`);
-  console.error(`   SPOTIFY_CLIENT_SECRET : ${CLIENT_SECRET ? '✓' : '✗ 未設定'}`);
-  console.error(`   SPOTIFY_REFRESH_TOKEN : ${REFRESH_TOKEN ? '✓' : '✗ 未設定'}`);
-  process.exit(1);
+  console.warn('⚠️  缺少 Spotify 環境變數，略過更新、保留現有 charts.json：');
+  console.warn(`   SPOTIFY_CLIENT_ID     : ${CLIENT_ID ? '✓' : '✗ 未設定'}`);
+  console.warn(`   SPOTIFY_CLIENT_SECRET : ${CLIENT_SECRET ? '✓' : '✗ 未設定'}`);
+  console.warn(`   SPOTIFY_REFRESH_TOKEN : ${REFRESH_TOKEN ? '✓' : '✗ 未設定'}`);
+  process.exit(0); // 不阻斷 build，用舊資料繼續
 }
 
 // ── 取得 Access Token ────────────────────────────────────────────────────────
