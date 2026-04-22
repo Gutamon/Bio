@@ -22,7 +22,7 @@ async function getAccessToken() {
       grant_type: 'refresh_token',
       refresh_token,
     }),
-    next: { revalidate: 3500 } // Token 有效期是 3600 秒
+    cache: 'no-store'
   });
 
   const data = await response.json();

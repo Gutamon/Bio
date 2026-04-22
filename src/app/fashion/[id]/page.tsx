@@ -38,7 +38,7 @@ export default async function FashionProjectPage({ params }: { params: Promise<{
             <section key={artwork.id} className="flex flex-col items-center space-y-6 md:space-y-8 bg-white dark:bg-stone-900 border border-stone-100 dark:border-stone-800 p-6 md:p-12 rounded shadow-sm w-full">
               <header className="flex flex-col items-center text-center gap-1.5 w-full">
                 <span className="font-sans font-medium text-lg tracking-wider text-stone-400 dark:text-stone-500 lining-nums">LOOK {String(artworkIndex + 1).padStart(2, '0')}</span>
-                <h2 className="font-serif text-3xl md:text-4xl font-bold">{artwork.title}</h2>
+                <h2 className="font-serif text-xl md:text-2xl font-normal">{artwork.title}</h2>
               </header>
               
               <div className="flex flex-col md:flex-row gap-6 md:gap-12 w-full justify-center items-center">

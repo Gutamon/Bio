@@ -1,126 +1,126 @@
 {
   "tracks": [
     {
-      "id": "1",
+      "id": "4c57ZlmIohTkITIGzyE197",
       "title": "Stranger",
       "artist": "Dijon",
-      "spotifyUrl": "https://open.spotify.com/track/4c57ZlmIohTkITIGzyE197?si=0a8037b5482b4d6f"
+      "spotifyUrl": "https://open.spotify.com/track/4c57ZlmIohTkITIGzyE197"
     },
     {
-      "id": "2",
-      "title": "Everything Is Peaceful Love",
-      "artist": "Bon Iver",
-      "spotifyUrl": "https://open.spotify.com/track/4XosapYiYaXGcxc83p3DD9?si=0b8c1e903d3b49b3"
-    },
-    {
-      "id": "3",
-      "title": "Slow Fade",
-      "artist": "Christian Kuria",
-      "spotifyUrl": "https://open.spotify.com/track/1iNjMcvGNJ7TSWZfVC6Eeh?si=3fafb4b25bba4e47"
-    },
-    {
-      "id": "4",
-      "title": "IN A DREAM",
-      "artist": "Troye Sivan",
-      "spotifyUrl": "https://open.spotify.com/track/6d48aJz9FrGQCfA9zj0ZMM?si=51482bf044d8413b"
-    },
-    {
-      "id": "5",
-      "title": "Bitter Pill",
-      "artist": "Christian Kuria",
-      "spotifyUrl": "https://open.spotify.com/track/6iUZtPnwLySt1lUNmxYW99?si=f9b95ac05c924a2a"
-    },
-    {
-      "id": "6",
-      "title": "Other Side of the World",
-      "artist": "LAUNDRY DAY",
-      "spotifyUrl": "https://open.spotify.com/track/50mMiyrPdvepwNbxCoImUH?si=2ab91a16277541c8"
-    },
-    {
-      "id": "7",
-      "title": "Day One",
-      "artist": "Dijon, Bon Iver",
-      "spotifyUrl": "https://open.spotify.com/track/6QJVQSuMC77psM4vgPo31D?si=35f46aabccb4418d"
-    },
-    {
-      "id": "8",
+      "id": "4dcB4irrogZQSbvGur1Wuf",
       "title": "Unsteady",
       "artist": "Calum Scott",
-      "spotifyUrl": "https://open.spotify.com/track/4dcB4irrogZQSbvGur1Wuf?si=e3396fdf44ad4fae"
+      "spotifyUrl": "https://open.spotify.com/track/4dcB4irrogZQSbvGur1Wuf"
     },
     {
-      "id": "9",
-      "title": "Homewrecker",
-      "artist": "sombr",
-      "spotifyUrl": "https://open.spotify.com/track/7tICCrK3CcyRFKza7yrR0z?si=ed5a9d2ed9c342a0"
+      "id": "1iNjMcvGNJ7TSWZfVC6Eeh",
+      "title": "Slow Fade",
+      "artist": "Christian Kuria",
+      "spotifyUrl": "https://open.spotify.com/track/1iNjMcvGNJ7TSWZfVC6Eeh"
     },
     {
-      "id": "10",
+      "id": "3xxUGSaRrNHmVXKsa3gqKs",
+      "title": "Ride",
+      "artist": "Christian Kuria",
+      "spotifyUrl": "https://open.spotify.com/track/3xxUGSaRrNHmVXKsa3gqKs"
+    },
+    {
+      "id": "4XosapYiYaXGcxc83p3DD9",
+      "title": "Everything Is Peaceful Love",
+      "artist": "Bon Iver",
+      "spotifyUrl": "https://open.spotify.com/track/4XosapYiYaXGcxc83p3DD9"
+    },
+    {
+      "id": "2TAKt1x0k9AltDJm31GhEu",
+      "title": "Bleed (feat. Omar Apollo)",
+      "artist": "Malcolm Todd, Omar Apollo",
+      "spotifyUrl": "https://open.spotify.com/track/2TAKt1x0k9AltDJm31GhEu"
+    },
+    {
+      "id": "1n5HZdNGSS4wzhKbBNHWxo",
+      "title": "Little Bit More",
+      "artist": "Mk.gee",
+      "spotifyUrl": "https://open.spotify.com/track/1n5HZdNGSS4wzhKbBNHWxo"
+    },
+    {
+      "id": "2yASo8VKTM1Xpj9Wi5I0Fj",
+      "title": "Blue Moon",
+      "artist": "Zara Larsson",
+      "spotifyUrl": "https://open.spotify.com/track/2yASo8VKTM1Xpj9Wi5I0Fj"
+    },
+    {
+      "id": "30nSDFwnTjVweKupURDK1g",
       "title": "Candy",
       "artist": "Mk.gee",
-      "spotifyUrl": "https://open.spotify.com/track/30nSDFwnTjVweKupURDK1g?si=5ee99a384ac04f89"
+      "spotifyUrl": "https://open.spotify.com/track/30nSDFwnTjVweKupURDK1g"
+    },
+    {
+      "id": "4vCtQuW7lYncp416VWH2eZ",
+      "title": "(Referee)",
+      "artist": "Dijon",
+      "spotifyUrl": "https://open.spotify.com/track/4vCtQuW7lYncp416VWH2eZ"
     }
   ],
   "albums": [
     {
-      "id": "1",
-      "title": "Paradigm",
-      "artist": "Christian Kuria",
-      "spotifyUrl": "https://open.spotify.com/album/3MaikI62Ap7RbrBSE0i4AU?si=de430a10d37e4e86"
-    },
-    {
-      "id": "2",
-      "title": "SABLE, fABLE",
-      "artist": "Bon Iver",
-      "spotifyUrl": "https://open.spotify.com/album/3L3UjpXtom6T0Plt1j6l1T?si=145a73aaefcb49e1"
-    },
-    {
-      "id": "3",
-      "title": "Addison",
-      "artist": "Addison Rae",
-      "spotifyUrl": "https://open.spotify.com/album/2ffVa2UhHUDwMHnr685zJ4?si=080c0709c338450f"
-    },
-    {
-      "id": "4",
-      "title": "Borderline",
-      "artist": "Christian Kuria",
-      "spotifyUrl": "https://open.spotify.com/album/5qoVwu8l7VyXOiMjjmyeAD?si=c828eb1b72f7476a"
-    },
-    {
-      "id": "5",
-      "title": "Two Star & The Dream Police",
-      "artist": "Mk.gee",
-      "spotifyUrl": "https://open.spotify.com/album/62xd4emBJXINuYl0RzfvO8?si=3c7422392a634787"
-    },
-    {
-      "id": "6",
-      "title": "Malcolm Todd",
-      "artist": "Malcolm Todd",
-      "spotifyUrl": "https://open.spotify.com/album/6IkS2cDHxaYVkJueCPSdFs?si=3a321c715a1b4c26"
-    },
-    {
-      "id": "7",
-      "title": "Baby!",
-      "artist": "Dijon",
-      "spotifyUrl": "https://open.spotify.com/album/3hKlec1wgYVJcI0YvwCFJB?si=971c6a88bd8a480c"
-    },
-    {
-      "id": "8",
-      "title": "EARWORM",
-      "artist": "LAUNDRY DAY",
-      "spotifyUrl": "https://open.spotify.com/album/0oJB399Gh1l7rlzJXbsF85?si=d727825c4746419e"
-    },
-    {
-      "id": "9",
+      "id": "0PpZlKRSocIBOf6mUY3tVw",
       "title": "Avenoir",
       "artist": "Calum Scott",
-      "spotifyUrl": "https://open.spotify.com/album/0PpZlKRSocIBOf6mUY3tVw?si=4Fx_QOVzT_G5yPQ_EW-6Pg"
+      "spotifyUrl": "https://open.spotify.com/album/0PpZlKRSocIBOf6mUY3tVw"
     },
     {
-      "id": "10",
-      "title": "BRAT",
-      "artist": "Charli xcx",
-      "spotifyUrl": "https://open.spotify.com/album/2lIZef4lzdvZkiiCzvPKj7?si=7a87544609bf4e65"
+      "id": "3MaikI62Ap7RbrBSE0i4AU",
+      "title": "Paradigm",
+      "artist": "Christian Kuria",
+      "spotifyUrl": "https://open.spotify.com/album/3MaikI62Ap7RbrBSE0i4AU"
+    },
+    {
+      "id": "3L3UjpXtom6T0Plt1j6l1T",
+      "title": "SABLE, fABLE",
+      "artist": "Bon Iver",
+      "spotifyUrl": "https://open.spotify.com/album/3L3UjpXtom6T0Plt1j6l1T"
+    },
+    {
+      "id": "6IkS2cDHxaYVkJueCPSdFs",
+      "title": "Malcolm Todd",
+      "artist": "Malcolm Todd",
+      "spotifyUrl": "https://open.spotify.com/album/6IkS2cDHxaYVkJueCPSdFs"
+    },
+    {
+      "id": "62xd4emBJXINuYl0RzfvO8",
+      "title": "Two Star & The Dream Police",
+      "artist": "Mk.gee",
+      "spotifyUrl": "https://open.spotify.com/album/62xd4emBJXINuYl0RzfvO8"
+    },
+    {
+      "id": "2IdHrETl3jsOYQRsF0nV16",
+      "title": "Midnight Sun",
+      "artist": "Zara Larsson",
+      "spotifyUrl": "https://open.spotify.com/album/2IdHrETl3jsOYQRsF0nV16"
+    },
+    {
+      "id": "3hKlec1wgYVJcI0YvwCFJB",
+      "title": "Baby",
+      "artist": "Dijon",
+      "spotifyUrl": "https://open.spotify.com/album/3hKlec1wgYVJcI0YvwCFJB"
+    },
+    {
+      "id": "2Ff38vAray2gR1xfw8z12S",
+      "title": "How Do You Feel About Getting Married?",
+      "artist": "Dijon",
+      "spotifyUrl": "https://open.spotify.com/album/2Ff38vAray2gR1xfw8z12S"
+    },
+    {
+      "id": "3dUPM1NIw5YPL4YQhU7aG2",
+      "title": "Suspension of Disbelief",
+      "artist": "Christian Kuria",
+      "spotifyUrl": "https://open.spotify.com/album/3dUPM1NIw5YPL4YQhU7aG2"
+    },
+    {
+      "id": "66M3ZXJLIgROFqMla74reu",
+      "title": "In A Dream (Bonus Track Version)",
+      "artist": "Troye Sivan",
+      "spotifyUrl": "https://open.spotify.com/album/66M3ZXJLIgROFqMla74reu"
     }
   ],
   "weeklyRecaps": [

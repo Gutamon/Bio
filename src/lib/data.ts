@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { getSpotifyTopData } from './spotify';
 
 const contentDir = path.join(process.cwd(), 'content');
 
@@ -103,24 +102,19 @@ export function getFashionCollections(): FashionCollection[] {
   return JSON.parse(fileContent);
 }
 
-// Music 音樂排行讀取 (動態從 Spotify 抓取 + 本地整合)
+// Music 音樂排行讀取 (從 charts.json 靜態讀取，由 scripts/update-charts.mjs 在 build 前更新)
 export async function getMusicCharts(): Promise<MusicData> {
   const filePath = path.join(contentDir, 'music', 'charts.json');
-  let weeklyRecaps: WeeklyRecap[] = [];
 
-  // 保留抓取本地の每周影片設定
-  if (fs.existsSync(filePath)) {
-    const fileContent = fs.readFileSync(filePath, 'utf-8');
-    const parsed = JSON.parse(fileContent);
-    weeklyRecaps = parsed.weeklyRecaps || [];
+  if (!fs.existsSync(filePath)) {
+    return { tracks: [], albums: [], weeklyRecaps: [] };
   }
 
-  // 從 Spotify 自動取得最高收獲的音樂清單
-  const spotifyData = await getSpotifyTopData();
+  const parsed = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 
   return {
-    tracks: spotifyData.tracks || [],
-    albums: spotifyData.albums || [],
-    weeklyRecaps
+    tracks: parsed.tracks || [],
+    albums: parsed.albums || [],
+    weeklyRecaps: parsed.weeklyRecaps || [],
   };
 }

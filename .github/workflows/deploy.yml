@@ -8,7 +8,7 @@ on:
     - cron: '0 0 * * *' # 每天 UTC 時間 00:00 (台灣早上 8:00) 自動觸發更新榜單
 
 permissions:
-  contents: read
+  contents: write   # 需要 write 才能 commit 回 charts.json
   pages: write
   id-token: write
 
@@ -22,15 +22,36 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update Spotify charts
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+        run: node scripts/update-charts.mjs
+
+      - name: Commit updated charts.json (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/music/charts.json
+          git diff --staged --quiet || git commit -m "chore: auto-update spotify charts [skip ci]"
+          git push
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
           static_site_generator: next
+
       - name: Restore cache
         uses: actions/cache@v4
         with:
@@ -39,14 +60,10 @@ jobs:
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
-      - name: Install dependencies
-        run: npm ci
+
       - name: Build with Next.js
-        env:
-          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
-          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
-          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
         run: npm run build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

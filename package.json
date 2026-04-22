@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "update-charts": "node scripts/update-charts.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
