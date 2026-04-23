@@ -39,8 +39,9 @@ export interface MusicItem {
 
 export interface WeeklyRecap {
   id: string;
-  week: string;
+  week?: string;
   title: string;
+  artist?: string;
   videoUrl: string;
   date: string;
 }

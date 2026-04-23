@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 
 // 1. 簡易的全域靜音狀態
-let globalIsMuted = false;
+let globalIsMuted = true;
 const muteListeners = new Set<(muted: boolean) => void>();
 
 function setGlobalMuted(muted: boolean) {
@@ -54,6 +54,9 @@ function evaluatePlayingVideo() {
   // 播放最高分的，其餘暫停
   visibleVideos.forEach((_, video) => {
     if (video === bestVideo) {
+      if (video.paused) {
+        video.currentTime = 0;
+      }
       video.play().catch(() => {});
     } else {
       if (!video.paused) video.pause();
@@ -85,9 +88,8 @@ if (typeof window !== 'undefined') {
     { threshold: [0.1, 0.3, 0.5, 0.7, 0.9, 1.0] } // 多重閾值以精確追蹤比例變化
   );
   
-  // 當發生滾動時，更新中心距離評價（因為 ratio 可能沒變，但距離變了）
   window.addEventListener('scroll', () => {
-    if (visibleVideos.size > 1) {
+    if (visibleVideos.size > 0) {
       evaluatePlayingVideo();
     }
   }, { capture: true, passive: true });

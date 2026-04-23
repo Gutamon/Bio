@@ -5,16 +5,66 @@
     "description": "在季節轉彎的地方 雛菊 檀香",
     "coverImage": "/Bio/fashion/25/25_cover.jpg",
     "artworks": [
-      { "id": "25-1", "title": "Garden", "image": "https://picsum.photos/seed/fashion25_1/800/1000", "video": "/Bio/fashion/25/25-1.MP4" },
-      { "id": "25-2", "title": "Lady Foruit", "image": "https://picsum.photos/seed/fashion25_2/800/1000", "video": "/Bio/fashion/25/25-2.mov" },
-      { "id": "25-3", "title": "Suna", "image": "https://picsum.photos/seed/fashion25_3/800/1000", "video": "/Bio/fashion/25/25-3.mov" },
-      { "id": "25-4", "title": "Serica", "image": "https://picsum.photos/seed/fashion25_4/800/1000", "video": "/Bio/fashion/25/25-4.MP4" },
-      { "id": "25-5", "title": "Redbean Madame", "image": "https://picsum.photos/seed/fashion25_5/800/1000", "video": "/Bio/fashion/25/25-5.mov" },
-      { "id": "25-6", "title": "Warm Snake", "image": "https://picsum.photos/seed/fashion25_6/800/1000", "video": "/Bio/fashion/25/25-6.MP4" },
-      { "id": "25-7", "title": "Dusa", "image": "https://picsum.photos/seed/fashion25_7/800/1000", "video": "/Bio/fashion/25/25-7.mov" },
-      { "id": "25-8", "title": "Meng", "image": "https://picsum.photos/seed/fashion25_8/800/1000", "video": "/Bio/fashion/25/25-8.mov" },
-      { "id": "25-9", "title": "Sa", "image": "https://picsum.photos/seed/fashion25_9/800/1000", "video": "/Bio/fashion/25/25-9.MP4" },
-      { "id": "25-10", "title": "Qinoa", "image": "https://picsum.photos/seed/fashion25_10/800/1000", "video": "/Bio/fashion/25/25-10.mov" }
+      {
+        "id": "25-1",
+        "title": "Garden",
+        "video": "/Bio/fashion/25/25-1.MP4",
+        "description": "胸衣修飾腰身同時放大胸肩，搭配錐形褲。演繹出春日莊園中力量與優雅共存的園丁形象。"
+      },
+      {
+        "id": "25-2",
+        "title": "Lady Foruit",
+        "video": "/Bio/fashion/25/25-2.mov",
+        "description": "此服裝設計巧妙地結合了古典的華麗與戲劇性的張力，營造出一種既宏大又內斂的情感衝突。\n\n整體廓形： 採用了極具壓倒性存在感的古典束腰骨架澎裙（pannier hoop skirt），打造出寬闊、雕塑般的輪廓，猶如一座可移動的華麗祭壇。\n\n上身細節： 緊身的束腰（stays）與衣身結構，如精緻的緊身胸衣，完美地勾勒出腰部曲線。最核心的視覺焦點在於胸前：一顆以奢華珠寶與精細刺繡打造的淌血之心。紅寶石般的血滴栩栩如生，沿著衣身滑落，寓意著至深的激情與神聖的痛苦，為整套服裝注入了靈魂的悸動。\n\n下身設計： 龐大的澎裙被戲劇性地分為兩半，形成了鮮明的對比。一半是深紅色的絲絨與織錦，點綴著石榴與漿果圖案的金色刺繡，象徵著豐饒、成熟與生機勃勃的果實（passion/fertility）。另一半則是午夜般的黑色緞面與蕾絲，綴以荊棘與陰影般的深灰色刺繡，象徵著不可觸碰的秘密、死亡與令人著迷的禁忌（taboo/mystery）。\n\n戲劇張力： 淌血的心靈與澎裙上紅與黑的對立，形成了一個關於愛與痛、生命與禁錮的 allegorical 敘事。古典的華麗（Exquisite classical opulence）與強烈的戲劇衝突（intense theatrical tension）在此交織，使這套服裝不僅是一件時裝，更是一幅充滿力量與情感的流動畫卷。"
+      },
+      {
+        "id": "25-3",
+        "title": "Suna",
+        "video": "/Bio/fashion/25/25-3.mov",
+        "description": ""
+      },
+      {
+        "id": "25-4",
+        "title": "Serica",
+        "video": "/Bio/fashion/25/25-4.MP4",
+        "description": ""
+      },
+      {
+        "id": "25-5",
+        "title": "Redbean Madame",
+        "video": "/Bio/fashion/25/25-5.mov",
+        "description": ""
+      },
+      {
+        "id": "25-6",
+        "title": "Warm Snake",
+        "video": "/Bio/fashion/25/25-6.MP4",
+        "description": ""
+      },
+      {
+        "id": "25-7",
+        "title": "Dusa",
+        "video": "/Bio/fashion/25/25-7.mov",
+        "description": ""
+      },
+      {
+        "id": "25-8",
+        "title": "Meng",
+        "video": "/Bio/fashion/25/25-8.mov",
+        "description": ""
+      },
+      {
+        "id": "25-9",
+        "title": "Sa",
+        "video": "/Bio/fashion/25/25-9.MP4",
+        "description": ""
+      },
+      {
+        "id": "25-10",
+        "title": "Qinoa",
+        "video": "/Bio/fashion/25/25-10.mov",
+        "description": ""
+      }
     ]
   },
   {
@@ -23,17 +73,72 @@
     "description": "輪廓是身體的雕塑 成就自由的盛開",
     "coverImage": "/Bio/fashion/24/24_cover.png",
     "artworks": [
-      { "id": "24-1", "title": "Lichina", "video": "/Bio/fashion/24/24-1.mov" },
-      { "id": "24-2", "title": "Madeleine", "video": "/Bio/fashion/24/24-2.mov" },
-      { "id": "24-3", "title": "Enmulle", "video": "/Bio/fashion/24/24-3.mov" },
-      { "id": "24-4", "title": "Siren", "video": "/Bio/fashion/24/24-4.mov" },
-      { "id": "24-5", "title": "Carter", "video": "/Bio/fashion/24/24-5.mov" },
-      { "id": "24-6", "title": "Chali", "video": "/Bio/fashion/24/24-6.mov" },
-      { "id": "24-7", "title": "Milancci", "video": "/Bio/fashion/24/24-7.mov" },
-      { "id": "24-8", "title": "Silah", "video": "/Bio/fashion/24/24-8.mov" },
-      { "id": "24-9", "title": "Omar", "video": "/Bio/fashion/24/24-9.mov" },
-      { "id": "24-10", "title": "Bruban", "video": "/Bio/fashion/24/24-10.mov" },
-      { "id": "24-11", "title": "Shin", "video": "/Bio/fashion/24/24-11.mov" }
+      {
+        "id": "24-1",
+        "title": "Lichina",
+        "video": "/Bio/fashion/24/24-1.mov",
+        "description": ""
+      },
+      {
+        "id": "24-2",
+        "title": "Madeleine",
+        "video": "/Bio/fashion/24/24-2.mov",
+        "description": ""
+      },
+      {
+        "id": "24-3",
+        "title": "Enmulle",
+        "video": "/Bio/fashion/24/24-3.mov",
+        "description": ""
+      },
+      {
+        "id": "24-4",
+        "title": "Siren",
+        "video": "/Bio/fashion/24/24-4.mov",
+        "description": ""
+      },
+      {
+        "id": "24-5",
+        "title": "Carter",
+        "video": "/Bio/fashion/24/24-5.mov",
+        "description": ""
+      },
+      {
+        "id": "24-6",
+        "title": "Chali",
+        "video": "/Bio/fashion/24/24-6.mov",
+        "description": ""
+      },
+      {
+        "id": "24-7",
+        "title": "Milancci",
+        "video": "/Bio/fashion/24/24-7.mov",
+        "description": ""
+      },
+      {
+        "id": "24-8",
+        "title": "Silah",
+        "video": "/Bio/fashion/24/24-8.mov",
+        "description": ""
+      },
+      {
+        "id": "24-9",
+        "title": "Omar",
+        "video": "/Bio/fashion/24/24-9.mov",
+        "description": ""
+      },
+      {
+        "id": "24-10",
+        "title": "Bruban",
+        "video": "/Bio/fashion/24/24-10.mov",
+        "description": ""
+      },
+      {
+        "id": "24-11",
+        "title": "Shin",
+        "video": "/Bio/fashion/24/24-11.mov",
+        "description": ""
+      }
     ]
   }
 ]

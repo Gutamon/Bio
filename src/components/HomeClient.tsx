@@ -42,6 +42,7 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
           id: 'week-3',
           week: 'Week 3, April',
           title: 'Spring Vibes & Current Works',
+          artist: 'John Doe',
           videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4', 
           date: '2026-04-15'
         }
@@ -230,6 +231,7 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
                                 </div>
                                 <div className="p-3 flex flex-col gap-1.5 bg-white dark:bg-stone-900 flex-1 border-t border-stone-100 dark:border-stone-800">
                                   <h3 className="font-serif text-lg font-bold dark:text-white leading-tight">{recap.title}</h3>
+                                  {recap.artist && <p className="text-sm text-stone-600 dark:text-stone-300 mt-1">{recap.artist}</p>}
                                   <p className="text-xs text-stone-500 dark:text-stone-400 mt-auto pt-2">{recap.date}</p>
                                 </div>
                               </div>
