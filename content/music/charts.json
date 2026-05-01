@@ -111,16 +111,16 @@
       "spotifyUrl": "https://open.spotify.com/album/3dUPM1NIw5YPL4YQhU7aG2"
     },
     {
-      "id": "3hKlec1wgYVJcI0YvwCFJB",
-      "title": "Baby",
-      "artist": "Dijon",
-      "spotifyUrl": "https://open.spotify.com/album/3hKlec1wgYVJcI0YvwCFJB"
-    },
-    {
       "id": "66M3ZXJLIgROFqMla74reu",
       "title": "In A Dream (Bonus Track Version)",
       "artist": "Troye Sivan",
       "spotifyUrl": "https://open.spotify.com/album/66M3ZXJLIgROFqMla74reu"
+    },
+    {
+      "id": "3hKlec1wgYVJcI0YvwCFJB",
+      "title": "Baby",
+      "artist": "Dijon",
+      "spotifyUrl": "https://open.spotify.com/album/3hKlec1wgYVJcI0YvwCFJB"
     }
   ],
   "weeklyRecaps": [
