@@ -5,7 +5,7 @@ on:
     branches: ["master", "main"]
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # 每天 UTC 時間 00:00 (台灣早上 8:00) 自動觸發更新榜單
+    - cron: '0 1 * * 1' # 每周一 UTC 時間 01:00 (台灣早上 9:00) 自動觸發更新榜單
 
 permissions:
   contents: write   # 需要 write 才能 commit 回 charts.json
