@@ -49,10 +49,10 @@
       "spotifyUrl": "https://open.spotify.com/track/30nSDFwnTjVweKupURDK1g"
     },
     {
-      "id": "2yASo8VKTM1Xpj9Wi5I0Fj",
-      "title": "Blue Moon",
-      "artist": "Zara Larsson",
-      "spotifyUrl": "https://open.spotify.com/track/2yASo8VKTM1Xpj9Wi5I0Fj"
+      "id": "3H6xZgwRZx8McVUJzmMxWe",
+      "title": "Headphones On",
+      "artist": "Addison Rae",
+      "spotifyUrl": "https://open.spotify.com/track/3H6xZgwRZx8McVUJzmMxWe"
     },
     {
       "id": "76o5rjnUSoFsjztbVZxhqV",
@@ -93,16 +93,22 @@
       "spotifyUrl": "https://open.spotify.com/album/62xd4emBJXINuYl0RzfvO8"
     },
     {
-      "id": "2IdHrETl3jsOYQRsF0nV16",
-      "title": "Midnight Sun",
-      "artist": "Zara Larsson",
-      "spotifyUrl": "https://open.spotify.com/album/2IdHrETl3jsOYQRsF0nV16"
+      "id": "2ffVa2UhHUDwMHnr685zJ4",
+      "title": "Addison",
+      "artist": "Addison Rae",
+      "spotifyUrl": "https://open.spotify.com/album/2ffVa2UhHUDwMHnr685zJ4"
     },
     {
       "id": "2Ff38vAray2gR1xfw8z12S",
       "title": "How Do You Feel About Getting Married?",
       "artist": "Dijon",
       "spotifyUrl": "https://open.spotify.com/album/2Ff38vAray2gR1xfw8z12S"
+    },
+    {
+      "id": "2IdHrETl3jsOYQRsF0nV16",
+      "title": "Midnight Sun",
+      "artist": "Zara Larsson",
+      "spotifyUrl": "https://open.spotify.com/album/2IdHrETl3jsOYQRsF0nV16"
     },
     {
       "id": "3dUPM1NIw5YPL4YQhU7aG2",
@@ -115,12 +121,6 @@
       "title": "In A Dream (Bonus Track Version)",
       "artist": "Troye Sivan",
       "spotifyUrl": "https://open.spotify.com/album/66M3ZXJLIgROFqMla74reu"
-    },
-    {
-      "id": "2ffVa2UhHUDwMHnr685zJ4",
-      "title": "Addison",
-      "artist": "Addison Rae",
-      "spotifyUrl": "https://open.spotify.com/album/2ffVa2UhHUDwMHnr685zJ4"
     }
   ],
   "weeklyRecaps": [
