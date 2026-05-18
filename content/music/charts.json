@@ -31,16 +31,16 @@
       "spotifyUrl": "https://open.spotify.com/track/4XosapYiYaXGcxc83p3DD9"
     },
     {
-      "id": "2TAKt1x0k9AltDJm31GhEu",
-      "title": "Bleed (feat. Omar Apollo)",
-      "artist": "Malcolm Todd, Omar Apollo",
-      "spotifyUrl": "https://open.spotify.com/track/2TAKt1x0k9AltDJm31GhEu"
-    },
-    {
       "id": "1n5HZdNGSS4wzhKbBNHWxo",
       "title": "Little Bit More",
       "artist": "Mk.gee",
       "spotifyUrl": "https://open.spotify.com/track/1n5HZdNGSS4wzhKbBNHWxo"
+    },
+    {
+      "id": "2TAKt1x0k9AltDJm31GhEu",
+      "title": "Bleed (feat. Omar Apollo)",
+      "artist": "Malcolm Todd, Omar Apollo",
+      "spotifyUrl": "https://open.spotify.com/track/2TAKt1x0k9AltDJm31GhEu"
     },
     {
       "id": "30nSDFwnTjVweKupURDK1g",
@@ -55,10 +55,10 @@
       "spotifyUrl": "https://open.spotify.com/track/3H6xZgwRZx8McVUJzmMxWe"
     },
     {
-      "id": "76o5rjnUSoFsjztbVZxhqV",
-      "title": "hunni",
-      "artist": "Dijon",
-      "spotifyUrl": "https://open.spotify.com/track/76o5rjnUSoFsjztbVZxhqV"
+      "id": "6ouhsRJ7gExB7LCYjITk4Y",
+      "title": "Diet Pepsi",
+      "artist": "Addison Rae",
+      "spotifyUrl": "https://open.spotify.com/track/6ouhsRJ7gExB7LCYjITk4Y"
     }
   ],
   "albums": [
@@ -81,16 +81,16 @@
       "spotifyUrl": "https://open.spotify.com/album/3L3UjpXtom6T0Plt1j6l1T"
     },
     {
-      "id": "6IkS2cDHxaYVkJueCPSdFs",
-      "title": "Malcolm Todd",
-      "artist": "Malcolm Todd",
-      "spotifyUrl": "https://open.spotify.com/album/6IkS2cDHxaYVkJueCPSdFs"
-    },
-    {
       "id": "62xd4emBJXINuYl0RzfvO8",
       "title": "Two Star & The Dream Police",
       "artist": "Mk.gee",
       "spotifyUrl": "https://open.spotify.com/album/62xd4emBJXINuYl0RzfvO8"
+    },
+    {
+      "id": "6IkS2cDHxaYVkJueCPSdFs",
+      "title": "Malcolm Todd",
+      "artist": "Malcolm Todd",
+      "spotifyUrl": "https://open.spotify.com/album/6IkS2cDHxaYVkJueCPSdFs"
     },
     {
       "id": "2ffVa2UhHUDwMHnr685zJ4",
