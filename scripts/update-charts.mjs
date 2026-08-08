@@ -60,7 +60,7 @@ async function getAccessToken() {
 // ── 呼叫 Spotify API ─────────────────────────────────────────────────────────
 async function fetchTopTracks(accessToken) {
   const res = await fetch(
-    'https://api.spotify.com/v1/me/top/tracks?time_range=medium_term&limit=50',
+    'https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=50',
     {
       headers: { Authorization: `Bearer ${accessToken}` },
     }
@@ -79,11 +79,15 @@ async function fetchTopTracks(accessToken) {
 // ── 整理資料 ─────────────────────────────────────────────────────────────────
 function processItems(items) {
   const tracks = [];
+  const seenTrackKeys = new Set();
   const albumsMap = new Map();
+  const seenAlbumKeys = new Set();
 
   for (const item of items) {
-    // Top Tracks（前 10）
-    if (tracks.length < 10) {
+    // Top Tracks（前 10，跳過重複的曲目後遞補下一筆）
+    const trackKey = `${item.name.toLowerCase()}::${item.artists.map((a) => a.name).join(', ').toLowerCase()}`;
+    if (tracks.length < 10 && !seenTrackKeys.has(trackKey)) {
+      seenTrackKeys.add(trackKey);
       tracks.push({
         id: item.id,
         title: item.name,
@@ -92,16 +96,19 @@ function processItems(items) {
       });
     }
 
-    // Top Albums（從 50 首中推導，前 10 張）
-    if (item.album && albumsMap.size < 10 && !albumsMap.has(item.album.id)) {
+    // Top Albums（從 50 首中推導，前 10 張，跳過重複的專輯（同專輯名+歌手）後遞補下一筆）
+    if (item.album && albumsMap.size < 10) {
+      const albumArtist = item.album.artists.map((a) => a.name).join(', ');
+      const albumKey = `${item.album.name.toLowerCase()}::${albumArtist.toLowerCase()}`;
       const type = item.album.album_type?.toLowerCase();
       const trackCount = item.album.total_tracks || 0;
 
-      if (type === 'album' || (type === 'single' && trackCount >= 4)) {
+      if (!seenAlbumKeys.has(albumKey) && (type === 'album' || (type === 'single' && trackCount >= 4))) {
+        seenAlbumKeys.add(albumKey);
         albumsMap.set(item.album.id, {
           id: item.album.id,
           title: item.album.name,
-          artist: item.album.artists.map((a) => a.name).join(', '),
+          artist: albumArtist,
           spotifyUrl: item.album.external_urls.spotify,
         });
       }

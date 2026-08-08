@@ -54,19 +54,23 @@ async function fetchWebApi(endpoint: string, method: string, body?: any) {
  * Fetch Top Tracks from Spotify and map them to our MusicData format
  */
 export async function getSpotifyTopData(): Promise<Omit<MusicData, 'weeklyRecaps'>> {
-  // Fetch top tracks (medium_term = roughly last 6 months, matching 2026-01-01 to now)
-  const data = await fetchWebApi('v1/me/top/tracks?time_range=medium_term&limit=50', 'GET');
-  
+  // Fetch top tracks (short_term = roughly last 4 weeks)
+  const data = await fetchWebApi('v1/me/top/tracks?time_range=short_term&limit=50', 'GET');
+
   if (!data || !data.items) {
     return { tracks: [], albums: [] };
   }
 
   const tracks: MusicItem[] = [];
+  const seenTrackKeys = new Set<string>();
   const albumsMap = new Map<string, MusicItem>();
+  const seenAlbumKeys = new Set<string>();
 
   data.items.forEach((item: any) => {
-    // Collect Top Tracks
-    if (tracks.length < 10) {
+    // Collect Top Tracks，跳過重複的曲目（同曲名+歌手），遞補下一筆
+    const trackKey = `${item.name.toLowerCase()}::${item.artists.map((a: any) => a.name).join(', ').toLowerCase()}`;
+    if (tracks.length < 10 && !seenTrackKeys.has(trackKey)) {
+      seenTrackKeys.add(trackKey);
       tracks.push({
         id: item.id,
         title: item.name,
@@ -75,17 +79,20 @@ export async function getSpotifyTopData(): Promise<Omit<MusicData, 'weeklyRecaps
       });
     }
 
-    // Collect Unique Top Albums derived from all 50 top tracks
-    if (item.album && albumsMap.size < 10 && !albumsMap.has(item.album.id)) {
+    // Collect Unique Top Albums derived from all 50 top tracks，跳過重複的專輯（同專輯名+歌手），遞補下一筆
+    if (item.album && albumsMap.size < 10) {
+      const albumArtist = item.album.artists.map((a: any) => a.name).join(', ');
+      const albumKey = `${item.album.name.toLowerCase()}::${albumArtist.toLowerCase()}`;
       const type = item.album.album_type?.toLowerCase();
       const trackCount = item.album.total_tracks || 0;
-      
+
       // 只允許「正式專輯 (album)」或是「曲目數量大於等於4首的迷你專輯/EP」
-      if (type === 'album' || (type === 'single' && trackCount >= 4)) {
+      if (!seenAlbumKeys.has(albumKey) && (type === 'album' || (type === 'single' && trackCount >= 4))) {
+        seenAlbumKeys.add(albumKey);
         albumsMap.set(item.album.id, {
           id: item.album.id,
           title: item.album.name,
-          artist: item.album.artists.map((a: any) => a.name).join(', '),
+          artist: albumArtist,
           spotifyUrl: item.album.external_urls.spotify,
         });
       }

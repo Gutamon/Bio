@@ -1,0 +1,487 @@
+---
+title: "帳本：全功能個人記帳"
+description: "一個涵蓋初始設定、記帳、資產總覽、圖表分析、負債與股票管理的全功能 PWA 理財應用，支援跨裝置同步與資料匯入匯出。"
+tags: ["PWA", "前端開發", "IndexedDB", "理財工具"]
+coverImage: "/Bio/code/expense_tracker/cover.jpg"
+---
+
+<div className="max-w-none pb-32">
+
+  {/* 頂部總覽 */}
+  <div className="mb-10 p-6 rounded-2xl bg-gradient-to-br from-stone-50 to-white dark:from-stone-900 dark:to-stone-950 border border-stone-200 dark:border-stone-800/80">
+    <div className="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+      「帳本」是一個以 <strong className="text-stone-900 dark:text-stone-100">PWA</strong> 打造的全功能個人理財應用，從首次啟用的資料選擇（全新開始／匯入還原／識別碼同步），到記帳、資產總覽、圖表分析、負債與股票管理一應俱全。底部功能列與 App 本身的底部導覽列一致，點選任一分頁即可橫向滑覽該功能的實機截圖與介紹 —— 就像親自滑過一次這個 App。
+    </div>
+  </div>
+
+  {/* ===== CSS-only Tab System ===== */}
+  <div className="relative
+    has-[#tab-onboarding:checked]:[&_#panel-onboarding]:block
+    has-[#tab-record:checked]:[&_#panel-record]:block
+    has-[#tab-chart:checked]:[&_#panel-chart]:block
+    has-[#tab-debt:checked]:[&_#panel-debt]:block
+    has-[#tab-stock:checked]:[&_#panel-stock]:block
+    has-[#tab-settings:checked]:[&_#panel-settings]:block
+    has-[#tab-onboarding:checked]:[&_label[for=tab-onboarding]]:bg-stone-900
+    has-[#tab-onboarding:checked]:[&_label[for=tab-onboarding]]:text-white
+    dark:has-[#tab-onboarding:checked]:[&_label[for=tab-onboarding]]:bg-stone-100
+    dark:has-[#tab-onboarding:checked]:[&_label[for=tab-onboarding]]:text-stone-900
+    has-[#tab-record:checked]:[&_label[for=tab-record]]:bg-stone-900
+    has-[#tab-record:checked]:[&_label[for=tab-record]]:text-white
+    dark:has-[#tab-record:checked]:[&_label[for=tab-record]]:bg-stone-100
+    dark:has-[#tab-record:checked]:[&_label[for=tab-record]]:text-stone-900
+    has-[#tab-chart:checked]:[&_label[for=tab-chart]]:bg-stone-900
+    has-[#tab-chart:checked]:[&_label[for=tab-chart]]:text-white
+    dark:has-[#tab-chart:checked]:[&_label[for=tab-chart]]:bg-stone-100
+    dark:has-[#tab-chart:checked]:[&_label[for=tab-chart]]:text-stone-900
+    has-[#tab-debt:checked]:[&_label[for=tab-debt]]:bg-stone-900
+    has-[#tab-debt:checked]:[&_label[for=tab-debt]]:text-white
+    dark:has-[#tab-debt:checked]:[&_label[for=tab-debt]]:bg-stone-100
+    dark:has-[#tab-debt:checked]:[&_label[for=tab-debt]]:text-stone-900
+    has-[#tab-stock:checked]:[&_label[for=tab-stock]]:bg-stone-900
+    has-[#tab-stock:checked]:[&_label[for=tab-stock]]:text-white
+    dark:has-[#tab-stock:checked]:[&_label[for=tab-stock]]:bg-stone-100
+    dark:has-[#tab-stock:checked]:[&_label[for=tab-stock]]:text-stone-900
+    has-[#tab-settings:checked]:[&_label[for=tab-settings]]:bg-stone-900
+    has-[#tab-settings:checked]:[&_label[for=tab-settings]]:text-white
+    dark:has-[#tab-settings:checked]:[&_label[for=tab-settings]]:bg-stone-100
+    dark:has-[#tab-settings:checked]:[&_label[for=tab-settings]]:text-stone-900
+  ">
+
+    <input type="radio" name="expense-tab" id="tab-onboarding" className="hidden" defaultChecked />
+    <input type="radio" name="expense-tab" id="tab-record" className="hidden" />
+    <input type="radio" name="expense-tab" id="tab-chart" className="hidden" />
+    <input type="radio" name="expense-tab" id="tab-debt" className="hidden" />
+    <input type="radio" name="expense-tab" id="tab-stock" className="hidden" />
+    <input type="radio" name="expense-tab" id="tab-settings" className="hidden" />
+
+    {/* ============ 面板 1：初始設定與入門（橫向） ============ */}
+    <div id="panel-onboarding" className="tab-panel hidden space-y-6">
+      <div className="flex items-center gap-4 pb-4 border-b border-stone-200 dark:border-stone-800/80">
+        <div className="w-10 h-10 rounded-xl bg-violet-100 dark:bg-violet-900/30 flex items-center justify-center text-violet-600 dark:text-violet-500">
+          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+        </div>
+        <h2 className="text-3xl font-serif font-bold text-stone-900 dark:text-stone-100">初始設定與入門</h2>
+      </div>
+
+      <div className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-stone-100 dark:[&::-webkit-scrollbar-track]:bg-stone-900 [&::-webkit-scrollbar-thumb]:bg-stone-300 dark:[&::-webkit-scrollbar-thumb]:bg-stone-700 [&::-webkit-scrollbar-thumb]:rounded-full">
+        <div className="flex flex-col group shrink-0 snap-start w-[260px] sm:w-[300px] rounded-2xl shadow-sm border border-stone-200/80 dark:border-stone-800/80 bg-white dark:bg-stone-900 overflow-hidden">
+          <div className="p-4 bg-stone-50 dark:bg-stone-950 flex items-center justify-center border-b border-stone-100 dark:border-stone-800/50">
+            <img src="/Bio/code/expense_tracker/onboarding-welcome.png" alt="首次啟用歡迎畫面" className="w-full max-w-[200px] h-auto object-contain rounded-lg shadow-sm border border-stone-200/50 dark:border-stone-800/50 group-hover:scale-[1.02] transition-transform duration-500 ease-out" />
+          </div>
+          <div className="p-5 flex-1 flex flex-col">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="px-2.5 py-0.5 rounded-full bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-400 text-[10px] font-bold tracking-wider uppercase">Setup</span>
+              <h3 className="text-base font-bold text-stone-900 dark:text-stone-100">三種啟用方式</h3>
+            </div>
+            <div className="text-stone-600 dark:text-stone-400 text-xs leading-relaxed">
+              首次開啟即提供「全新開始」快速建立預設帳戶與類別；「匯入／還原資料」可讀取其他記帳 App 的 CSV/TXT，或還原本應用程式的 ZIP 備份；「使用識別碼」則能認回舊帳本或加入其他裝置同步。
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col group shrink-0 snap-start w-[260px] sm:w-[300px] rounded-2xl shadow-sm border border-stone-200/80 dark:border-stone-800/80 bg-white dark:bg-stone-900 overflow-hidden">
+          <div className="p-4 bg-stone-50 dark:bg-stone-950 flex items-center justify-center border-b border-stone-100 dark:border-stone-800/50">
+            <img src="/Bio/code/expense_tracker/onboarding-sync-code.png" alt="識別碼輸入畫面" className="w-full max-w-[200px] h-auto object-contain rounded-lg shadow-sm border border-stone-200/50 dark:border-stone-800/50 group-hover:scale-[1.02] transition-transform duration-500 ease-out" />
+          </div>
+          <div className="p-5 flex-1 flex flex-col">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-[10px] font-bold tracking-wider uppercase">Sync</span>
+              <h3 className="text-base font-bold text-stone-900 dark:text-stone-100">識別碼跨裝置認回</h3>
+            </div>
+            <div className="text-stone-600 dark:text-stone-400 text-xs leading-relaxed">
+              每個帳本都會產生一組專屬識別碼（如 A2B4-C6D8）。清除瀏覽器資料、更換裝置，或想在手機與電腦間共用同一份帳本時，只要輸入這組代碼即可立即「認回」，不需註冊帳號即可完成跨裝置同步。
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col group shrink-0 snap-start w-[260px] sm:w-[300px] rounded-2xl shadow-sm border border-stone-200/80 dark:border-stone-800/80 bg-white dark:bg-stone-900 overflow-hidden">
+          <div className="p-4 bg-stone-50 dark:bg-stone-950 flex items-center justify-center border-b border-stone-100 dark:border-stone-800/50">
+            <img src="/Bio/code/expense_tracker/onboarding-english.png" alt="英文語系畫面" className="w-full max-w-[200px] h-auto object-contain rounded-lg shadow-sm border border-stone-200/50 dark:border-stone-800/50 group-hover:scale-[1.02] transition-transform duration-500 ease-out" />
+          </div>
+          <div className="p-5 flex-1 flex flex-col">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-[10px] font-bold tracking-wider uppercase">i18n</span>
+              <h3 className="text-base font-bold text-stone-900 dark:text-stone-100">中英雙語系介面</h3>
+            </div>
+            <div className="text-stone-600 dark:text-stone-400 text-xs leading-relaxed">
+              右上角地球圖示可即時切換「中文／English」介面文字，從啟用畫面到內部所有功能頁籤、按鈕、說明文字皆完整雙語化，方便不同語言背景的使用者上手。
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col shrink-0 snap-start w-[220px] sm:w-[260px] rounded-2xl border border-dashed border-stone-300 dark:border-stone-700 bg-stone-50 dark:bg-stone-900/50 items-center justify-center p-6 text-center">
+          <div className="text-2xl mb-3">💡</div>
+          <div className="text-stone-600 dark:text-stone-400 text-xs leading-relaxed">
+            三種入口同時照顧全新使用者、遷移使用者與多裝置使用者，降低記帳工具的導入門檻。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* ============ 面板 2：記帳核心功能（橫向） ============ */}
+    <div id="panel-record" className="tab-panel hidden space-y-6">
+      <div className="flex items-center gap-4 pb-4 border-b border-stone-200 dark:border-stone-800/80">
+        <div className="w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-amber-600 dark:text-amber-500">
+          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
+        </div>
+        <h2 className="text-3xl font-serif font-bold text-stone-900 dark:text-stone-100">記帳核心功能</h2>
+      </div>
+
+      <div className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-stone-100 dark:[&::-webkit-scrollbar-track]:bg-stone-900 [&::-webkit-scrollbar-thumb]:bg-stone-300 dark:[&::-webkit-scrollbar-thumb]:bg-stone-700 [&::-webkit-scrollbar-thumb]:rounded-full">
+        <div className="flex flex-col group shrink-0 snap-start w-[260px] sm:w-[300px] rounded-2xl shadow-sm border border-stone-200/80 dark:border-stone-800/80 bg-white dark:bg-stone-900 overflow-hidden">
+          <div className="p-4 bg-stone-50 dark:bg-stone-950 flex items-center justify-center border-b border-stone-100 dark:border-stone-800/50">
+            <img src="/Bio/code/expense_tracker/app-home-record.png" alt="記帳明細主畫面" className="w-full max-w-[200px] h-auto object-contain rounded-lg shadow-sm border border-stone-200/50 dark:border-stone-800/50 group-hover:scale-[1.02] transition-transform duration-500 ease-out" />
+          </div>
+          <div className="p-5 flex-1 flex flex-col">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="px-2.5 py-0.5 rounded-full bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 text-[10px] font-bold tracking-wider uppercase">Ledger</span>
+              <h3 className="text-base font-bold text-stone-900 dark:text-stone-100">月曆式記帳明細</h3>
+            </div>
+            <div className="text-stone-600 dark:text-stone-400 text-xs leading-relaxed">
+              以月份為單位瀏覽收支明細，內建月預算進度條即時掌握花費狀況，並可透過搜尋快速定位單筆紀錄。
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col group shrink-0 snap-start w-[260px] sm:w-[300px] rounded-2xl shadow-sm border border-stone-200/80 dark:border-stone-800/80 bg-white dark:bg-stone-900 overflow-hidden">
+          <div className="p-4 bg-stone-50 dark:bg-stone-950 flex items-center justify-center border-b border-stone-100 dark:border-stone-800/50">
+            <img src="/Bio/code/expense_tracker/app-calendar-view.png" alt="行事曆檢視" className="w-full max-w-[200px] h-auto object-contain rounded-lg shadow-sm border border-stone-200/50 dark:border-stone-800/50 group-hover:scale-[1.02] transition-transform duration-500 ease-out" />
+          </div>
+          <div className="p-5 flex-1 flex flex-col">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-[10px] font-bold tracking-wider uppercase">Calendar</span>
+              <h3 className="text-base font-bold text-stone-900 dark:text-stone-100">行事曆檢視切換</h3>
+            </div>
+            <div className="text-stone-600 dark:text-stone-400 text-xs leading-relaxed">
+              明細與行事曆兩種檢視模式一鍵切換，行事曆模式將每日收支落在對應日期上，方便回顧消費軌跡。
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col group shrink-0 snap-start w-[260px] sm:w-[300px] rounded-2xl shadow-sm border border-stone-200/80 dark:border-stone-800/80 bg-white dark:bg-stone-900 overflow-hidden">
+          <div className="p-4 bg-stone-50 dark:bg-stone-950 flex items-center justify-center border-b border-stone-100 dark:border-stone-800/50">
+            <img src="/Bio/code/expense_tracker/app-add-transaction.png" alt="新增明細表單" className="w-full max-w-[200px] h-auto object-contain rounded-lg shadow-sm border border-stone-200/50 dark:border-stone-800/50 group-hover:scale-[1.02] transition-transform duration-500 ease-out" />
+          </div>
+          <div className="p-5 flex-1 flex flex-col">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="px-2.5 py-0.5 rounded-full bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-400 text-[10px] font-bold tracking-wider uppercase">Add</span>
+              <h3 className="text-base font-bold text-stone-900 dark:text-stone-100">支出／收入／轉帳三合一</h3>
+            </div>
+            <div className="text-stone-600 dark:text-stone-400 text-xs leading-relaxed">
+              單一表單切換三種交易類型，「再記一筆」按鈕讓連續輸入不需重新開啟表單，右下角浮動按鈕隨時可喚出。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* ============ 面板 3：資產與圖表分析（橫向） ============ */}
+    <div id="panel-chart" className="tab-panel hidden space-y-6">
+      <div className="flex items-center gap-4 pb-4 border-b border-stone-200 dark:border-stone-800/80">
+        <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-500">
+          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+        </div>
+        <h2 className="text-3xl font-serif font-bold text-stone-900 dark:text-stone-100">資產總覽與圖表分析</h2>
+      </div>
+
+      <div className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-stone-100 dark:[&::-webkit-scrollbar-track]:bg-stone-900 [&::-webkit-scrollbar-thumb]:bg-stone-300 dark:[&::-webkit-scrollbar-thumb]:bg-stone-700 [&::-webkit-scrollbar-thumb]:rounded-full">
+        <div className="flex flex-col group shrink-0 snap-start w-[300px] sm:w-[340px] rounded-2xl shadow-sm border border-stone-200/80 dark:border-stone-800/80 bg-white dark:bg-stone-900 overflow-hidden">
+          <div className="p-4 bg-stone-50 dark:bg-stone-950 flex items-center justify-center border-b border-stone-100 dark:border-stone-800/50">
+            <img src="/Bio/code/expense_tracker/app-asset-overview.png" alt="資產總覽" className="w-full max-w-[240px] h-auto object-contain rounded-lg shadow-sm border border-stone-200/50 dark:border-stone-800/50 group-hover:scale-[1.02] transition-transform duration-500 ease-out" />
+          </div>
+          <div className="p-5 flex-1 flex flex-col">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-[10px] font-bold tracking-wider uppercase">Overview</span>
+              <h3 className="text-base font-bold text-stone-900 dark:text-stone-100">資產／負債／股票總覽</h3>
+            </div>
+            <div className="text-stone-600 dark:text-stone-400 text-xs leading-relaxed">
+              一頁彙整現金、銀行、預付儲值等自訂帳戶餘額，並將負債與股票市值一併納入淨資產計算，資產組成可依「自訂帳戶」或「類型」兩種角度切換檢視。
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col group shrink-0 snap-start w-[300px] sm:w-[340px] rounded-2xl shadow-sm border border-stone-200/80 dark:border-stone-800/80 bg-white dark:bg-stone-900 overflow-hidden">
+          <div className="p-4 bg-stone-50 dark:bg-stone-950 flex items-center justify-center border-b border-stone-100 dark:border-stone-800/50">
+            <img src="/Bio/code/expense_tracker/app-charts.png" alt="圖表分析" className="w-full max-w-[240px] h-auto object-contain rounded-lg shadow-sm border border-stone-200/50 dark:border-stone-800/50 group-hover:scale-[1.02] transition-transform duration-500 ease-out" />
+          </div>
+          <div className="p-5 flex-1 flex flex-col">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="px-2.5 py-0.5 rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-400 text-[10px] font-bold tracking-wider uppercase">Chart</span>
+              <h3 className="text-base font-bold text-stone-900 dark:text-stone-100">收支趨勢圖表</h3>
+            </div>
+            <div className="text-stone-600 dark:text-stone-400 text-xs leading-relaxed">
+              以折線圖呈現總資產、支出、收入隨時間變化的趨勢，支援依帳戶、群組、類別篩選，並可切換月／年／全區間，同時列出區間內主要支出與收入項目排行。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* ============ 面板 4：負債管理（橫向） ============ */}
+    <div id="panel-debt" className="tab-panel hidden space-y-6">
+      <div className="flex items-center gap-4 pb-4 border-b border-stone-200 dark:border-stone-800/80">
+        <div className="w-10 h-10 rounded-xl bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600 dark:text-red-500">
+          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+        </div>
+        <h2 className="text-3xl font-serif font-bold text-stone-900 dark:text-stone-100">信用卡與借貸管理</h2>
+      </div>
+
+      <div className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-stone-100 dark:[&::-webkit-scrollbar-track]:bg-stone-900 [&::-webkit-scrollbar-thumb]:bg-stone-300 dark:[&::-webkit-scrollbar-thumb]:bg-stone-700 [&::-webkit-scrollbar-thumb]:rounded-full">
+        <div className="flex flex-col group shrink-0 snap-start w-[300px] sm:w-[340px] rounded-2xl shadow-sm border border-stone-200/80 dark:border-stone-800/80 bg-white dark:bg-stone-900 overflow-hidden">
+          <div className="p-4 bg-stone-50 dark:bg-stone-950 flex items-center justify-center border-b border-stone-100 dark:border-stone-800/50">
+            <img src="/Bio/code/expense_tracker/app-debt.png" alt="負債管理" className="w-full max-w-[240px] h-auto object-contain rounded-lg shadow-sm border border-stone-200/50 dark:border-stone-800/50 group-hover:scale-[1.02] transition-transform duration-500 ease-out" />
+          </div>
+          <div className="p-5 flex-1 flex flex-col">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="px-2.5 py-0.5 rounded-full bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 text-[10px] font-bold tracking-wider uppercase">Debt</span>
+              <h3 className="text-base font-bold text-stone-900 dark:text-stone-100">信用卡分頁總覽</h3>
+            </div>
+            <div className="text-stone-600 dark:text-stone-400 text-xs leading-relaxed">
+              即時彙總未繳總額、本期新增消費與持卡數，可新增多張信用卡分別追蹤帳單週期與還款狀態。
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col shrink-0 snap-start w-[240px] sm:w-[280px] rounded-2xl border border-dashed border-stone-300 dark:border-stone-700 bg-stone-50 dark:bg-stone-900/50 items-center justify-center p-6 text-center">
+          <div className="w-10 h-10 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-orange-600 dark:text-orange-400 mb-3">
+            <span className="w-2 h-2 rounded-full bg-orange-500"></span>
+          </div>
+          <h3 className="text-sm font-bold text-stone-900 dark:text-stone-100 mb-2">借貸分頁獨立追蹤</h3>
+          <div className="text-stone-600 dark:text-stone-400 text-xs leading-relaxed">
+            「信用卡」與「借貸」兩類負債分頁管理，各自獨立記錄本金與還款進度，並自動併入資產總覽的淨資產計算。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* ============ 面板 5：股票投資（橫向） ============ */}
+    <div id="panel-stock" className="tab-panel hidden space-y-6">
+      <div className="flex items-center gap-4 pb-4 border-b border-stone-200 dark:border-stone-800/80">
+        <div className="w-10 h-10 rounded-xl bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center text-teal-600 dark:text-teal-500">
+          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+        </div>
+        <h2 className="text-3xl font-serif font-bold text-stone-900 dark:text-stone-100">股票倉位與報酬分析</h2>
+      </div>
+
+      <div className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-stone-100 dark:[&::-webkit-scrollbar-track]:bg-stone-900 [&::-webkit-scrollbar-thumb]:bg-stone-300 dark:[&::-webkit-scrollbar-thumb]:bg-stone-700 [&::-webkit-scrollbar-thumb]:rounded-full">
+        <div className="flex flex-col group shrink-0 snap-start w-[300px] sm:w-[340px] rounded-2xl shadow-sm border border-stone-200/80 dark:border-stone-800/80 bg-white dark:bg-stone-900 overflow-hidden">
+          <div className="p-4 bg-stone-50 dark:bg-stone-950 flex items-center justify-center border-b border-stone-100 dark:border-stone-800/50">
+            <img src="/Bio/code/expense_tracker/app-stocks.png" alt="股票投資組合" className="w-full max-w-[240px] h-auto object-contain rounded-lg shadow-sm border border-stone-200/50 dark:border-stone-800/50 group-hover:scale-[1.02] transition-transform duration-500 ease-out" />
+          </div>
+          <div className="p-5 flex-1 flex flex-col">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="px-2.5 py-0.5 rounded-full bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-400 text-[10px] font-bold tracking-wider uppercase">Stocks</span>
+              <h3 className="text-base font-bold text-stone-900 dark:text-stone-100">完整交易類型記錄</h3>
+            </div>
+            <div className="text-stone-600 dark:text-stone-400 text-xs leading-relaxed">
+              支援買入、賣出、股利、分割等完整交易類型記錄，倉位與交易明細可隨時切換檢視。
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col shrink-0 snap-start w-[240px] sm:w-[280px] rounded-2xl border border-dashed border-stone-300 dark:border-stone-700 bg-stone-50 dark:bg-stone-900/50 items-center justify-center p-6 text-center">
+          <div className="w-10 h-10 rounded-full bg-cyan-100 dark:bg-cyan-900/30 flex items-center justify-center text-cyan-600 dark:text-cyan-400 mb-3">
+            <span className="w-2 h-2 rounded-full bg-cyan-500"></span>
+          </div>
+          <h3 className="text-sm font-bold text-stone-900 dark:text-stone-100 mb-2">自動報酬分析</h3>
+          <div className="text-stone-600 dark:text-stone-400 text-xs leading-relaxed">
+            自動計算總投入成本、總市值與未實現損益，並可一鍵更新現價或匯入交易紀錄。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* ============ 面板 6：設定與資料管理（橫向） ============ */}
+    <div id="panel-settings" className="tab-panel hidden space-y-6">
+      <div className="flex items-center gap-4 pb-4 border-b border-stone-200 dark:border-stone-800/80">
+        <div className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800/50 flex items-center justify-center text-slate-600 dark:text-slate-400">
+          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /></svg>
+        </div>
+        <h2 className="text-3xl font-serif font-bold text-stone-900 dark:text-stone-100">設定與資料管理</h2>
+      </div>
+
+      <div className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-stone-100 dark:[&::-webkit-scrollbar-track]:bg-stone-900 [&::-webkit-scrollbar-thumb]:bg-stone-300 dark:[&::-webkit-scrollbar-thumb]:bg-stone-700 [&::-webkit-scrollbar-thumb]:rounded-full">
+        <div className="flex flex-col group shrink-0 snap-start w-[260px] sm:w-[300px] rounded-2xl shadow-sm border border-stone-200/80 dark:border-stone-800/80 bg-white dark:bg-stone-900 overflow-hidden">
+          <div className="p-4 bg-stone-50 dark:bg-stone-950 flex items-center justify-center border-b border-stone-100 dark:border-stone-800/50">
+            <img src="/Bio/code/expense_tracker/app-settings.png" alt="帳戶設定頁面" className="w-full max-w-[200px] h-auto object-contain rounded-lg shadow-sm border border-stone-200/50 dark:border-stone-800/50 group-hover:scale-[1.02] transition-transform duration-500 ease-out" />
+          </div>
+          <div className="p-5 flex-1 flex flex-col">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-[10px] font-bold tracking-wider uppercase">Accounts</span>
+              <h3 className="text-base font-bold text-stone-900 dark:text-stone-100">帳戶列表管理</h3>
+            </div>
+            <div className="text-stone-600 dark:text-stone-400 text-xs leading-relaxed">
+              可拖曳排序記帳、信用卡、借貸、股票四類帳戶的顯示順序，個別設定圖示與是否列入資產計算。
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col group shrink-0 snap-start w-[260px] sm:w-[300px] rounded-2xl shadow-sm border border-stone-200/80 dark:border-stone-800/80 bg-white dark:bg-stone-900 overflow-hidden">
+          <div className="p-4 bg-stone-50 dark:bg-stone-950 flex items-center justify-center border-b border-stone-100 dark:border-stone-800/50">
+            <img src="/Bio/code/expense_tracker/app-settings-budget.png" alt="月預算設定" className="w-full max-w-[200px] h-auto object-contain rounded-lg shadow-sm border border-stone-200/50 dark:border-stone-800/50 group-hover:scale-[1.02] transition-transform duration-500 ease-out" />
+          </div>
+          <div className="p-5 flex-1 flex flex-col">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-[10px] font-bold tracking-wider uppercase">Budget</span>
+              <h3 className="text-base font-bold text-stone-900 dark:text-stone-100">月預算與細項預算</h3>
+            </div>
+            <div className="text-stone-600 dark:text-stone-400 text-xs leading-relaxed">
+              可設定每月總預算，並針對特定群組／類別勾選細項預算，「套用前月」按鈕可快速沿用上月設定。
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col group shrink-0 snap-start w-[260px] sm:w-[300px] rounded-2xl shadow-sm border border-stone-200/80 dark:border-stone-800/80 bg-white dark:bg-stone-900 overflow-hidden">
+          <div className="p-4 bg-stone-50 dark:bg-stone-950 flex items-center justify-center border-b border-stone-100 dark:border-stone-800/50">
+            <img src="/Bio/code/expense_tracker/app-settings-category.png" alt="類別管理" className="w-full max-w-[200px] h-auto object-contain rounded-lg shadow-sm border border-stone-200/50 dark:border-stone-800/50 group-hover:scale-[1.02] transition-transform duration-500 ease-out" />
+          </div>
+          <div className="p-5 flex-1 flex flex-col">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="px-2.5 py-0.5 rounded-full bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-400 text-[10px] font-bold tracking-wider uppercase">Category</span>
+              <h3 className="text-base font-bold text-stone-900 dark:text-stone-100">支出／收入類別自訂</h3>
+            </div>
+            <div className="text-stone-600 dark:text-stone-400 text-xs leading-relaxed">
+              支出與收入類別分開管理，可依群組（如「生活」「休閒」）篩選、拖曳排序，並標記是否納入預算項目。
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col group shrink-0 snap-start w-[260px] sm:w-[300px] rounded-2xl shadow-sm border border-stone-200/80 dark:border-stone-800/80 bg-white dark:bg-stone-900 overflow-hidden">
+          <div className="p-4 bg-stone-50 dark:bg-stone-950 flex items-center justify-center border-b border-stone-100 dark:border-stone-800/50">
+            <img src="/Bio/code/expense_tracker/app-settings-data.png" alt="語言與資料管理" className="w-full max-w-[200px] h-auto object-contain rounded-lg shadow-sm border border-stone-200/50 dark:border-stone-800/50 group-hover:scale-[1.02] transition-transform duration-500 ease-out" />
+          </div>
+          <div className="p-5 flex-1 flex flex-col">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="px-2.5 py-0.5 rounded-full bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-400 text-[10px] font-bold tracking-wider uppercase">Data</span>
+              <h3 className="text-base font-bold text-stone-900 dark:text-stone-100">語言切換與備份匯出</h3>
+            </div>
+            <div className="text-stone-600 dark:text-stone-400 text-xs leading-relaxed">
+              「資料與」頁籤集中管理語言（中文／English）、匯出 ZIP 備份、匯出並清空所有資料，以及顯示裝置專屬識別碼供跨裝置同步使用。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* 功能列 —— 固定於底部，仿照 App 本身的底部導覽列 */}
+    <div className="tab-bar fixed bottom-6 left-1/2 -translate-x-1/2 z-30 flex justify-center gap-1 sm:gap-2 p-2 rounded-2xl bg-white/90 dark:bg-stone-900/90 backdrop-blur-md border border-stone-200 dark:border-stone-800 shadow-lg max-w-[calc(100vw-2rem)] overflow-x-auto">
+      <label htmlFor="tab-onboarding" className="cursor-pointer select-none flex flex-col items-center gap-1 px-3 sm:px-4 py-2 rounded-xl text-stone-500 dark:text-stone-400 transition-colors text-xs sm:text-sm font-medium whitespace-nowrap">
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+        開始
+      </label>
+      <label htmlFor="tab-record" className="cursor-pointer select-none flex flex-col items-center gap-1 px-3 sm:px-4 py-2 rounded-xl text-stone-500 dark:text-stone-400 transition-colors text-xs sm:text-sm font-medium whitespace-nowrap">
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+        記帳
+      </label>
+      <label htmlFor="tab-chart" className="cursor-pointer select-none flex flex-col items-center gap-1 px-3 sm:px-4 py-2 rounded-xl text-stone-500 dark:text-stone-400 transition-colors text-xs sm:text-sm font-medium whitespace-nowrap">
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+        圖表
+      </label>
+      <label htmlFor="tab-debt" className="cursor-pointer select-none flex flex-col items-center gap-1 px-3 sm:px-4 py-2 rounded-xl text-stone-500 dark:text-stone-400 transition-colors text-xs sm:text-sm font-medium whitespace-nowrap">
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+        負債
+      </label>
+      <label htmlFor="tab-stock" className="cursor-pointer select-none flex flex-col items-center gap-1 px-3 sm:px-4 py-2 rounded-xl text-stone-500 dark:text-stone-400 transition-colors text-xs sm:text-sm font-medium whitespace-nowrap">
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+        股票
+      </label>
+      <label htmlFor="tab-settings" className="cursor-pointer select-none flex flex-col items-center gap-1 px-3 sm:px-4 py-2 rounded-xl text-stone-500 dark:text-stone-400 transition-colors text-xs sm:text-sm font-medium whitespace-nowrap">
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><circle cx="12" cy="12" r="3" strokeWidth={2}/></svg>
+        設定
+      </label>
+    </div>
+
+  </div>
+  {/* ===== 結束 CSS-only Tab System ===== */}
+
+  {/* Features & Architecture Grid */}
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16">
+    <div className="p-8 rounded-3xl bg-gradient-to-br from-stone-50 to-white dark:from-stone-900 dark:to-stone-950 border border-stone-200 dark:border-stone-800/80 shadow-sm hover:shadow-xl dark:hover:shadow-stone-900/50 transition-shadow duration-500">
+      <div className="w-12 h-12 mb-6 rounded-xl bg-amber-500/10 flex items-center justify-center">
+        <svg className="w-6 h-6 text-amber-600 dark:text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+        </svg>
+      </div>
+      <h3 className="text-2xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">資料模型設計</h3>
+      <div className="text-stone-600 dark:text-stone-400 leading-relaxed mb-8 text-sm">
+        以帳戶為核心串連四大理財面向，確保記帳、負債與投資資料彼此獨立又能匯總成單一淨資產視角。
+      </div>
+      <div className="space-y-4">
+        {[
+          { title: "記帳明細", desc: "支出／收入／轉帳三種類型，含金額、類別、帳戶、日期與備註。" },
+          { title: "帳戶群組", desc: "現金、銀行、預付儲值、其他等自訂帳戶，可標記是否列入資產。" },
+          { title: "負債紀錄", desc: "信用卡未繳總額、本期新增消費與借貸本金分開追蹤。" },
+          { title: "股票倉位", desc: "記錄買入、賣出、股利與分割事件，換算總成本與未實現損益。" }
+        ].map((item, i) => (
+          <div key={item.title} className="flex gap-4 items-start pb-4 border-b border-stone-100 dark:border-stone-800/50 last:border-0 last:pb-0">
+            <span className="text-amber-500 font-mono text-sm mt-1 opacity-60">0{i+1}</span>
+            <div>
+              <strong className="block text-stone-800 dark:text-stone-200 text-[15px] mb-1">{item.title}</strong>
+              <span className="text-sm text-stone-500 dark:text-stone-400">{item.desc}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div className="p-8 rounded-3xl bg-gradient-to-br from-stone-50 to-white dark:from-stone-900 dark:to-stone-950 border border-stone-200 dark:border-stone-800/80 shadow-sm hover:shadow-xl dark:hover:shadow-stone-900/50 transition-shadow duration-500">
+      <div className="w-12 h-12 mb-6 rounded-xl bg-emerald-500/10 flex items-center justify-center">
+        <svg className="w-6 h-6 text-emerald-600 dark:text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      </div>
+      <h3 className="text-2xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">系統功能亮點</h3>
+      <div className="text-stone-600 dark:text-stone-400 leading-relaxed mb-8 text-sm">
+        從快速記帳到跨裝置同步，全面覆蓋個人理財的日常使用情境。
+      </div>
+      <div className="space-y-4">
+        {[
+          { title: "三種入門路徑", desc: "全新開始、CSV/ZIP 匯入還原、識別碼認回，降低導入門檻。" },
+          { title: "浮動快速記帳", desc: "常駐「＋」按鈕搭配「再記一筆」，連續輸入交易毫不中斷。" },
+          { title: "多維度圖表分析", desc: "依帳戶、群組、類別篩選，並可切換月／年／全區間比較。" },
+          { title: "中英雙語與資料可攜", desc: "介面可切換中文／English，並隨時匯出 ZIP 完整備份。" }
+        ].map((item, i) => (
+          <div key={item.title} className="flex gap-4 items-start pb-4 border-b border-stone-100 dark:border-stone-800/50 last:border-0 last:pb-0">
+            <span className="text-emerald-500 font-mono text-sm mt-1 opacity-60">0{i+1}</span>
+            <div>
+              <strong className="block text-stone-800 dark:text-stone-200 text-[15px] mb-1">{item.title}</strong>
+              <span className="text-sm text-stone-500 dark:text-stone-400">{item.desc}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  {/* CTA Section */}
+  <div className="pt-8">
+    <div className="relative overflow-hidden p-10 rounded-3xl bg-stone-900 dark:bg-stone-100 shadow-2xl flex flex-col md:flex-row items-center gap-8 justify-between group">
+      <div className="absolute -right-24 -top-24 w-64 h-64 bg-blue-500/30 rounded-full blur-3xl group-hover:bg-emerald-500/30 transition-colors duration-1000"></div>
+
+      <div className="relative z-10 text-center md:text-left flex-1">
+        <h3 className="text-2xl font-serif font-bold text-white dark:text-stone-900 mb-3">
+          前往體驗帳本
+        </h3>
+        <div className="text-stone-400 dark:text-stone-500 text-sm max-w-md mx-auto md:mx-0">
+          立即開啟，親自感受從初始設定到資產全覽的完整理財流程
+        </div>
+      </div>
+
+      <a
+        href="https://expense.gutamon.net.im/"
+        target="_blank"
+        rel="noreferrer"
+        className="relative z-10 whitespace-nowrap inline-flex items-center gap-3 px-8 py-4 bg-white dark:bg-stone-900 text-stone-900 dark:text-white rounded-full font-semibold tracking-wider text-sm hover:scale-105 hover:shadow-xl dark:hover:shadow-stone-900/50 transition-all duration-300"
+      >
+        <div className="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </div>
+        開啟帳本
+      </a>
+    </div>
+  </div>
+
+</div>

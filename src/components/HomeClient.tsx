@@ -184,9 +184,10 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
             >
               <div className="flex flex-col gap-6">
                 
-                {/* WEEKLY RECAP Section */}
+                {/* WEEKLY RECAP Section — 暫時隱藏，保留程式碼供之後恢復 */}
+                {false && (
                 <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-lg overflow-hidden shadow-sm">
-                  <button 
+                  <button
                     onClick={() => toggleSection('weekly')}
                     className="w-full px-6 py-5 flex justify-between items-center bg-stone-50 dark:bg-stone-800/50 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors"
                   >
@@ -210,8 +211,8 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
                       >
                         <div className="relative py-6 border-t border-stone-200 dark:border-stone-800 group/slider">
                           {weeklyRecaps.length > 1 && (
-                            <button 
-                              onClick={() => scrollByAmount(-264)} 
+                            <button
+                              onClick={() => scrollByAmount(-264)}
                               className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 dark:bg-stone-800/90 backdrop-blur shadow-md items-center justify-center text-stone-700 dark:text-stone-300 opacity-0 group-hover/slider:opacity-100 transition-opacity hover:scale-105 active:scale-95 hidden sm:flex border border-stone-200 dark:border-stone-700"
                               aria-label="Scroll left"
                             >
@@ -222,7 +223,7 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
                           <div ref={scrollContainerRef} className="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                             {/* 開頭 Spacer 幫助第一個影片置中 */}
                             <div className="w-[calc(50%-30vw-12px)] sm:w-[calc(50%-120px-12px)] shrink-0" aria-hidden="true" />
-                            
+
                             {weeklyRecaps.map(recap => {
                               return (
                               <div key={recap.id} className="w-[60vw] sm:w-[240px] shrink-0 snap-center bg-stone-100 dark:bg-stone-800 rounded-2xl overflow-hidden flex flex-col group shadow-sm hover:shadow-xl dark:shadow-stone-900/50 transition-all border border-stone-200 dark:border-stone-700">
@@ -242,8 +243,8 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
                           </div>
 
                           {weeklyRecaps.length > 1 && (
-                            <button 
-                              onClick={() => scrollByAmount(264)} 
+                            <button
+                              onClick={() => scrollByAmount(264)}
                               className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 dark:bg-stone-800/90 backdrop-blur shadow-md items-center justify-center text-stone-700 dark:text-stone-300 opacity-0 group-hover/slider:opacity-100 transition-opacity hover:scale-105 active:scale-95 hidden sm:flex border border-stone-200 dark:border-stone-700"
                               aria-label="Scroll right"
                             >
@@ -255,32 +256,14 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
                     )}
                   </AnimatePresence>
                 </div>
+                )}
 
-                {/* 2026 TOP UPDATE Section */}
+                {/* FRESH TOP Section */}
                 <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-lg overflow-hidden shadow-sm">
-                  <button 
-                    onClick={() => toggleSection('top')}
-                    className="w-full px-6 py-5 flex justify-between items-center bg-stone-50 dark:bg-stone-800/50 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors"
-                  >
-                    <h2 className="font-mono text-2xl tracking-wide m-0 font-bold dark:text-stone-100">2026 TOP UPDATE</h2>
-                    <motion.div
-                      animate={{ rotate: openSections.top ? 180 : 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="text-stone-500"
-                    >
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                    </motion.div>
-                  </button>
-                  <AnimatePresence initial={false}>
-                    {openSections.top && (
-                      <motion.div
-                        key="top-content"
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: 'easeInOut' }}
-                      >
-                        <div className="p-6 border-t border-stone-200 dark:border-stone-800">
+                  <div className="w-full px-6 py-5 flex justify-between items-center bg-stone-50 dark:bg-stone-800/50">
+                    <h2 className="font-mono text-2xl tracking-wide m-0 font-bold dark:text-stone-100">FRESH TOP</h2>
+                  </div>
+                  <div className="p-6 border-t border-stone-200 dark:border-stone-800">
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                             <div>
                               <h3 className="text-xl font-medium mb-6 flex items-center gap-2">
@@ -379,9 +362,6 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
                             </div>
                           </div>
                         </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
                 </div>
               </div>
             </motion.div>
