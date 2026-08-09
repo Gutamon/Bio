@@ -35,6 +35,7 @@ export interface MusicItem {
   title: string;
   artist: string;
   spotifyUrl: string;
+  coverImage?: string;
 }
 
 export interface WeeklyRecap {

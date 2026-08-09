@@ -93,6 +93,7 @@ function processItems(items) {
         title: item.name,
         artist: item.artists.map((a) => a.name).join(', '),
         spotifyUrl: item.external_urls.spotify,
+        coverImage: item.album?.images?.[0]?.url || '',
       });
     }
 
@@ -110,6 +111,7 @@ function processItems(items) {
           title: item.album.name,
           artist: albumArtist,
           spotifyUrl: item.album.external_urls.spotify,
+          coverImage: item.album.images?.[0]?.url || '',
         });
       }
     }

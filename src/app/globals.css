@@ -12,6 +12,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* 禁止全站文字與圖片被反白選取 */
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+
 /* Custom Scrollbar for magazine vibe */
 ::-webkit-scrollbar {
   width: 6px;

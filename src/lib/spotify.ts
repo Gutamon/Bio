@@ -76,6 +76,7 @@ export async function getSpotifyTopData(): Promise<Omit<MusicData, 'weeklyRecaps
         title: item.name,
         artist: item.artists.map((a: any) => a.name).join(', '),
         spotifyUrl: item.external_urls.spotify,
+        coverImage: item.album?.images?.[0]?.url || '',
       });
     }
 
@@ -94,6 +95,7 @@ export async function getSpotifyTopData(): Promise<Omit<MusicData, 'weeklyRecaps
           title: item.album.name,
           artist: albumArtist,
           spotifyUrl: item.album.external_urls.spotify,
+          coverImage: item.album.images?.[0]?.url || '',
         });
       }
     }

@@ -281,12 +281,19 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
                                       {idx + 1}
                                     </div>
                                     <div className="w-[64px] h-[64px] shrink-0 bg-stone-200 dark:bg-stone-800 overflow-hidden rounded-md border border-stone-200 dark:border-stone-700 shadow-sm relative pointer-events-none">
-                                      {embedUrl ? (
-                                        <iframe 
-                                          src={embedUrl} 
-                                          width="300" 
-                                          height="80" 
-                                          frameBorder="0" 
+                                      {track.coverImage ? (
+                                        <img
+                                          src={track.coverImage}
+                                          alt={track.title}
+                                          className="w-full h-full object-cover"
+                                          onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                        />
+                                      ) : embedUrl ? (
+                                        <iframe
+                                          src={embedUrl}
+                                          width="300"
+                                          height="80"
+                                          frameBorder="0"
                                           allow="encrypted-media"
                                           className="absolute -left-2 -top-2"
                                         ></iframe>
@@ -329,12 +336,19 @@ export default function HomeClient({ codeProjects, fashionCollections, musicChar
                                       {idx + 1}
                                     </div>
                                     <div className="w-[64px] h-[64px] shrink-0 bg-stone-200 dark:bg-stone-800 overflow-hidden rounded-md border border-stone-200 dark:border-stone-700 shadow-sm relative pointer-events-none">
-                                      {embedUrl ? (
-                                        <iframe 
-                                          src={embedUrl} 
-                                          width="300" 
-                                          height="80" 
-                                          frameBorder="0" 
+                                      {album.coverImage ? (
+                                        <img
+                                          src={album.coverImage}
+                                          alt={album.title}
+                                          className="w-full h-full object-cover"
+                                          onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                        />
+                                      ) : embedUrl ? (
+                                        <iframe
+                                          src={embedUrl}
+                                          width="300"
+                                          height="80"
+                                          frameBorder="0"
                                           allow="encrypted-media"
                                           className="absolute -left-2 -top-2"
                                         ></iframe>
