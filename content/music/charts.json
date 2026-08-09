@@ -1,78 +1,108 @@
 {
   "tracks": [
     {
-      "id": "1iNjMcvGNJ7TSWZfVC6Eeh",
-      "title": "Slow Fade",
-      "artist": "Christian Kuria",
-      "spotifyUrl": "https://open.spotify.com/track/1iNjMcvGNJ7TSWZfVC6Eeh"
+      "id": "1OWBh1eVxUdA1Z6UA8r4nh",
+      "title": "the feeling",
+      "artist": "Steve Lacy",
+      "spotifyUrl": "https://open.spotify.com/track/1OWBh1eVxUdA1Z6UA8r4nh"
     },
     {
-      "id": "4c57ZlmIohTkITIGzyE197",
-      "title": "Stranger",
-      "artist": "Dijon",
-      "spotifyUrl": "https://open.spotify.com/track/4c57ZlmIohTkITIGzyE197"
+      "id": "22NHkFYbgxB2Zirj29Gbp8",
+      "title": "oh yeah?",
+      "artist": "Steve Lacy",
+      "spotifyUrl": "https://open.spotify.com/track/22NHkFYbgxB2Zirj29Gbp8"
     },
     {
-      "id": "4dcB4irrogZQSbvGur1Wuf",
-      "title": "Unsteady",
-      "artist": "Calum Scott",
-      "spotifyUrl": "https://open.spotify.com/track/4dcB4irrogZQSbvGur1Wuf"
+      "id": "3kKPZFQse4LtbnMRhnAlEO",
+      "title": "doom",
+      "artist": "Steve Lacy",
+      "spotifyUrl": "https://open.spotify.com/track/3kKPZFQse4LtbnMRhnAlEO"
     },
     {
-      "id": "1n5HZdNGSS4wzhKbBNHWxo",
-      "title": "Little Bit More",
-      "artist": "Mk.gee",
-      "spotifyUrl": "https://open.spotify.com/track/1n5HZdNGSS4wzhKbBNHWxo"
+      "id": "3lIHa4fUwNKOCSS5k3Za0i",
+      "title": "nothing",
+      "artist": "Steve Lacy",
+      "spotifyUrl": "https://open.spotify.com/track/3lIHa4fUwNKOCSS5k3Za0i"
     },
     {
-      "id": "30nSDFwnTjVweKupURDK1g",
-      "title": "Candy",
-      "artist": "Mk.gee",
-      "spotifyUrl": "https://open.spotify.com/track/30nSDFwnTjVweKupURDK1g"
+      "id": "3HiQJBnNtDkugJdUasvFl9",
+      "title": "nice shoes / in your world",
+      "artist": "Steve Lacy",
+      "spotifyUrl": "https://open.spotify.com/track/3HiQJBnNtDkugJdUasvFl9"
     },
     {
-      "id": "3gDpuaQWWciAyttVI0NXhD",
-      "title": "Sore Throat",
-      "artist": "Malcolm Todd",
-      "spotifyUrl": "https://open.spotify.com/track/3gDpuaQWWciAyttVI0NXhD"
+      "id": "4f50UTC41M2Ah5itifSGE5",
+      "title": "show you me",
+      "artist": "Steve Lacy",
+      "spotifyUrl": "https://open.spotify.com/track/4f50UTC41M2Ah5itifSGE5"
     },
     {
-      "id": "1ib0HGZolb3nwD62HBJYV5",
-      "title": "Breathe",
-      "artist": "Malcolm Todd",
-      "spotifyUrl": "https://open.spotify.com/track/1ib0HGZolb3nwD62HBJYV5"
+      "id": "4cPmWicSiYsqRQAzBey7h3",
+      "title": "lovesexdrugbomb (feat. Cecile Believe)",
+      "artist": "Steve Lacy, Cecile Believe",
+      "spotifyUrl": "https://open.spotify.com/track/4cPmWicSiYsqRQAzBey7h3"
     },
     {
-      "id": "2Cxz0VrxP96Oo9pWZxxNsd",
-      "title": "IN A DREAM",
-      "artist": "Troye Sivan",
-      "spotifyUrl": "https://open.spotify.com/track/2Cxz0VrxP96Oo9pWZxxNsd"
+      "id": "0zprBQpAaNFdV82NqjyiNx",
+      "title": "is it cool? (feat. SZA)",
+      "artist": "Steve Lacy, SZA",
+      "spotifyUrl": "https://open.spotify.com/track/0zprBQpAaNFdV82NqjyiNx"
     },
     {
-      "id": "50mMiyrPdvepwNbxCoImUH",
-      "title": "Other Side of the World",
-      "artist": "LAUNDRY DAY",
-      "spotifyUrl": "https://open.spotify.com/track/50mMiyrPdvepwNbxCoImUH"
+      "id": "0N7tCm0qrH7JFmDfwkRfRI",
+      "title": "Yeah",
+      "artist": "Charli xcx",
+      "spotifyUrl": "https://open.spotify.com/track/0N7tCm0qrH7JFmDfwkRfRI"
     },
     {
-      "id": "2sW7X1G7xaNZZX7b92NP6X",
-      "title": "Gun To My Head",
-      "artist": "Malcolm Todd",
-      "spotifyUrl": "https://open.spotify.com/track/2sW7X1G7xaNZZX7b92NP6X"
+      "id": "4qW3BbQAwZsrnu8a3ZRdyT",
+      "title": "Self Aware",
+      "artist": "Temper City",
+      "spotifyUrl": "https://open.spotify.com/track/4qW3BbQAwZsrnu8a3ZRdyT"
     }
   ],
   "albums": [
     {
-      "id": "3MaikI62Ap7RbrBSE0i4AU",
-      "title": "Paradigm",
-      "artist": "Christian Kuria",
-      "spotifyUrl": "https://open.spotify.com/album/3MaikI62Ap7RbrBSE0i4AU"
+      "id": "289GZwycrFReuNB706obBx",
+      "title": "Oh yeah?",
+      "artist": "Steve Lacy",
+      "spotifyUrl": "https://open.spotify.com/album/289GZwycrFReuNB706obBx"
     },
     {
-      "id": "0PpZlKRSocIBOf6mUY3tVw",
-      "title": "Avenoir",
-      "artist": "Calum Scott",
-      "spotifyUrl": "https://open.spotify.com/album/0PpZlKRSocIBOf6mUY3tVw"
+      "id": "4bR7pd6TVS53l24qFV4wI8",
+      "title": "Music, Fashion, Film",
+      "artist": "Charli xcx",
+      "spotifyUrl": "https://open.spotify.com/album/4bR7pd6TVS53l24qFV4wI8"
+    },
+    {
+      "id": "3Ry4DmajssDWHmThH2KseJ",
+      "title": "boy",
+      "artist": "Luke Hemmings",
+      "spotifyUrl": "https://open.spotify.com/album/3Ry4DmajssDWHmThH2KseJ"
+    },
+    {
+      "id": "0nqsPuGO0iEl4MRWwjhWF2",
+      "title": "Do That Again",
+      "artist": "Malcolm Todd",
+      "spotifyUrl": "https://open.spotify.com/album/0nqsPuGO0iEl4MRWwjhWF2"
+    },
+    {
+      "id": "1CWY6mfnuLlF4BKRLFcUDQ",
+      "title": "CONFESSIONS II",
+      "artist": "Madonna",
+      "spotifyUrl": "https://open.spotify.com/album/1CWY6mfnuLlF4BKRLFcUDQ"
+    },
+    {
+      "id": "15f7NbTSybK9XQIvaU9ItN",
+      "title": "江蕙",
+      "artist": "Jody Chiang",
+      "spotifyUrl": "https://open.spotify.com/album/15f7NbTSybK9XQIvaU9ItN"
+    },
+    {
+      "id": "18qJgKH8dyYe2RRp6TbnNY",
+      "title": "you seem pretty sad for a girl so in love",
+      "artist": "Olivia Rodrigo",
+      "spotifyUrl": "https://open.spotify.com/album/18qJgKH8dyYe2RRp6TbnNY"
     },
     {
       "id": "62xd4emBJXINuYl0RzfvO8",
@@ -87,40 +117,10 @@
       "spotifyUrl": "https://open.spotify.com/album/2jX6yKrWw9bY7JAYHhhtqZ"
     },
     {
-      "id": "0nqsPuGO0iEl4MRWwjhWF2",
-      "title": "Do That Again",
-      "artist": "Malcolm Todd",
-      "spotifyUrl": "https://open.spotify.com/album/0nqsPuGO0iEl4MRWwjhWF2"
-    },
-    {
-      "id": "66M3ZXJLIgROFqMla74reu",
-      "title": "In A Dream (Bonus Track Version)",
-      "artist": "Troye Sivan",
-      "spotifyUrl": "https://open.spotify.com/album/66M3ZXJLIgROFqMla74reu"
-    },
-    {
-      "id": "3IKW2jLFBTUGEIwJha62vD",
-      "title": "Do That Again",
-      "artist": "Malcolm Todd",
-      "spotifyUrl": "https://open.spotify.com/album/3IKW2jLFBTUGEIwJha62vD"
-    },
-    {
-      "id": "2ffVa2UhHUDwMHnr685zJ4",
-      "title": "Addison",
-      "artist": "Addison Rae",
-      "spotifyUrl": "https://open.spotify.com/album/2ffVa2UhHUDwMHnr685zJ4"
-    },
-    {
-      "id": "4oniyB3TRFhjglVSqVgy9e",
-      "title": "Wuthering Heights",
-      "artist": "Charli xcx",
-      "spotifyUrl": "https://open.spotify.com/album/4oniyB3TRFhjglVSqVgy9e"
-    },
-    {
-      "id": "3L3UjpXtom6T0Plt1j6l1T",
-      "title": "SABLE, fABLE",
-      "artist": "Bon Iver",
-      "spotifyUrl": "https://open.spotify.com/album/3L3UjpXtom6T0Plt1j6l1T"
+      "id": "4BZydSQMfJNphTFZzyIxh5",
+      "title": "Daughter from Hell",
+      "artist": "Gracie Abrams",
+      "spotifyUrl": "https://open.spotify.com/album/4BZydSQMfJNphTFZzyIxh5"
     }
   ],
   "weeklyRecaps": [
