@@ -22,13 +22,6 @@
       "coverImage": "https://i.scdn.co/image/ab67616d0000b2734ea9ba86cd9506a004bab042"
     },
     {
-      "id": "3lIHa4fUwNKOCSS5k3Za0i",
-      "title": "nothing",
-      "artist": "Steve Lacy",
-      "spotifyUrl": "https://open.spotify.com/track/3lIHa4fUwNKOCSS5k3Za0i",
-      "coverImage": "https://i.scdn.co/image/ab67616d0000b2734ea9ba86cd9506a004bab042"
-    },
-    {
       "id": "4f50UTC41M2Ah5itifSGE5",
       "title": "show you me",
       "artist": "Steve Lacy",
@@ -36,10 +29,10 @@
       "coverImage": "https://i.scdn.co/image/ab67616d0000b2734ea9ba86cd9506a004bab042"
     },
     {
-      "id": "3HiQJBnNtDkugJdUasvFl9",
-      "title": "nice shoes / in your world",
+      "id": "3lIHa4fUwNKOCSS5k3Za0i",
+      "title": "nothing",
       "artist": "Steve Lacy",
-      "spotifyUrl": "https://open.spotify.com/track/3HiQJBnNtDkugJdUasvFl9",
+      "spotifyUrl": "https://open.spotify.com/track/3lIHa4fUwNKOCSS5k3Za0i",
       "coverImage": "https://i.scdn.co/image/ab67616d0000b2734ea9ba86cd9506a004bab042"
     },
     {
@@ -47,6 +40,13 @@
       "title": "lovesexdrugbomb (feat. Cecile Believe)",
       "artist": "Steve Lacy, Cecile Believe",
       "spotifyUrl": "https://open.spotify.com/track/4cPmWicSiYsqRQAzBey7h3",
+      "coverImage": "https://i.scdn.co/image/ab67616d0000b2734ea9ba86cd9506a004bab042"
+    },
+    {
+      "id": "3HiQJBnNtDkugJdUasvFl9",
+      "title": "nice shoes / in your world",
+      "artist": "Steve Lacy",
+      "spotifyUrl": "https://open.spotify.com/track/3HiQJBnNtDkugJdUasvFl9",
       "coverImage": "https://i.scdn.co/image/ab67616d0000b2734ea9ba86cd9506a004bab042"
     },
     {
@@ -101,18 +101,11 @@
       "coverImage": "https://i.scdn.co/image/ab67616d0000b2736ad1bfc5a6102f8e926a8c5f"
     },
     {
-      "id": "1CWY6mfnuLlF4BKRLFcUDQ",
-      "title": "CONFESSIONS II",
-      "artist": "Madonna",
-      "spotifyUrl": "https://open.spotify.com/album/1CWY6mfnuLlF4BKRLFcUDQ",
-      "coverImage": "https://i.scdn.co/image/ab67616d0000b2732e45924aa55275c64280cada"
-    },
-    {
-      "id": "2jX6yKrWw9bY7JAYHhhtqZ",
-      "title": "Sweet Boy",
-      "artist": "Malcolm Todd",
-      "spotifyUrl": "https://open.spotify.com/album/2jX6yKrWw9bY7JAYHhhtqZ",
-      "coverImage": "https://i.scdn.co/image/ab67616d0000b2732c1f34ecc1929fb59908aad1"
+      "id": "1bsLkHcWAGUao6Z1dHOEIB",
+      "title": "Cupid Deluxe",
+      "artist": "Blood Orange",
+      "spotifyUrl": "https://open.spotify.com/album/1bsLkHcWAGUao6Z1dHOEIB",
+      "coverImage": "https://i.scdn.co/image/ab67616d0000b2739d6bd2afa2987a69b7b55f72"
     },
     {
       "id": "62xd4emBJXINuYl0RzfvO8",
@@ -122,18 +115,25 @@
       "coverImage": "https://i.scdn.co/image/ab67616d0000b2738b048b6486231cca4766a076"
     },
     {
-      "id": "15f7NbTSybK9XQIvaU9ItN",
-      "title": "江蕙",
-      "artist": "Jody Chiang",
-      "spotifyUrl": "https://open.spotify.com/album/15f7NbTSybK9XQIvaU9ItN",
-      "coverImage": "https://i.scdn.co/image/ab67616d0000b273c5945c4a5e75f0a705cf9246"
-    },
-    {
       "id": "18qJgKH8dyYe2RRp6TbnNY",
       "title": "you seem pretty sad for a girl so in love",
       "artist": "Olivia Rodrigo",
       "spotifyUrl": "https://open.spotify.com/album/18qJgKH8dyYe2RRp6TbnNY",
       "coverImage": "https://i.scdn.co/image/ab67616d0000b2736949b83f85d782b21ce70583"
+    },
+    {
+      "id": "2jX6yKrWw9bY7JAYHhhtqZ",
+      "title": "Sweet Boy",
+      "artist": "Malcolm Todd",
+      "spotifyUrl": "https://open.spotify.com/album/2jX6yKrWw9bY7JAYHhhtqZ",
+      "coverImage": "https://i.scdn.co/image/ab67616d0000b2732c1f34ecc1929fb59908aad1"
+    },
+    {
+      "id": "15f7NbTSybK9XQIvaU9ItN",
+      "title": "江蕙",
+      "artist": "Jody Chiang",
+      "spotifyUrl": "https://open.spotify.com/album/15f7NbTSybK9XQIvaU9ItN",
+      "coverImage": "https://i.scdn.co/image/ab67616d0000b273c5945c4a5e75f0a705cf9246"
     },
     {
       "id": "4BZydSQMfJNphTFZzyIxh5",
