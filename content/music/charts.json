@@ -8,13 +8,6 @@
       "coverImage": "https://i.scdn.co/image/ab67616d0000b2734ea9ba86cd9506a004bab042"
     },
     {
-      "id": "22NHkFYbgxB2Zirj29Gbp8",
-      "title": "oh yeah?",
-      "artist": "Steve Lacy",
-      "spotifyUrl": "https://open.spotify.com/track/22NHkFYbgxB2Zirj29Gbp8",
-      "coverImage": "https://i.scdn.co/image/ab67616d0000b2734ea9ba86cd9506a004bab042"
-    },
-    {
       "id": "4q5EIdR3ONbaq6GvO9FV61",
       "title": "She’s the Best",
       "artist": "Troye Sivan",
@@ -22,11 +15,11 @@
       "coverImage": "https://i.scdn.co/image/ab67616d0000b273d4c317bb44f2a29d00316ab5"
     },
     {
-      "id": "3kKPZFQse4LtbnMRhnAlEO",
-      "title": "doom",
-      "artist": "Steve Lacy",
-      "spotifyUrl": "https://open.spotify.com/track/3kKPZFQse4LtbnMRhnAlEO",
-      "coverImage": "https://i.scdn.co/image/ab67616d0000b2734ea9ba86cd9506a004bab042"
+      "id": "4c57ZlmIohTkITIGzyE197",
+      "title": "Stranger",
+      "artist": "Dijon",
+      "spotifyUrl": "https://open.spotify.com/track/4c57ZlmIohTkITIGzyE197",
+      "coverImage": "https://i.scdn.co/image/ab67616d0000b273a5af4384ef4a9dd3fec1b285"
     },
     {
       "id": "4f50UTC41M2Ah5itifSGE5",
@@ -36,6 +29,20 @@
       "coverImage": "https://i.scdn.co/image/ab67616d0000b2734ea9ba86cd9506a004bab042"
     },
     {
+      "id": "22NHkFYbgxB2Zirj29Gbp8",
+      "title": "oh yeah?",
+      "artist": "Steve Lacy",
+      "spotifyUrl": "https://open.spotify.com/track/22NHkFYbgxB2Zirj29Gbp8",
+      "coverImage": "https://i.scdn.co/image/ab67616d0000b2734ea9ba86cd9506a004bab042"
+    },
+    {
+      "id": "2QNndTbo9mvgOoOKJvpEl2",
+      "title": "I Got You",
+      "artist": "Bazzi",
+      "spotifyUrl": "https://open.spotify.com/track/2QNndTbo9mvgOoOKJvpEl2",
+      "coverImage": "https://i.scdn.co/image/ab67616d0000b2736d415f423a260947c291f54c"
+    },
+    {
       "id": "0BPWY79wNehGVARtwJawYV",
       "title": "It Is What It Is",
       "artist": "Blood Orange, Samantha Urbani",
@@ -43,32 +50,25 @@
       "coverImage": "https://i.scdn.co/image/ab67616d0000b2739d6bd2afa2987a69b7b55f72"
     },
     {
-      "id": "0JeAKH2DCIgCCrZ9qBGthg",
-      "title": "Malcolm In The Middle",
+      "id": "3gDpuaQWWciAyttVI0NXhD",
+      "title": "Sore Throat",
       "artist": "Malcolm Todd",
-      "spotifyUrl": "https://open.spotify.com/track/0JeAKH2DCIgCCrZ9qBGthg",
-      "coverImage": "https://i.scdn.co/image/ab67616d0000b2736ad1bfc5a6102f8e926a8c5f"
+      "spotifyUrl": "https://open.spotify.com/track/3gDpuaQWWciAyttVI0NXhD",
+      "coverImage": "https://i.scdn.co/image/ab67616d0000b2732c1f34ecc1929fb59908aad1"
     },
     {
-      "id": "4qW3BbQAwZsrnu8a3ZRdyT",
-      "title": "Self Aware",
-      "artist": "Temper City",
-      "spotifyUrl": "https://open.spotify.com/track/4qW3BbQAwZsrnu8a3ZRdyT",
-      "coverImage": "https://i.scdn.co/image/ab67616d0000b273d6c26d2ae723f7ab553d64cc"
-    },
-    {
-      "id": "0N7tCm0qrH7JFmDfwkRfRI",
-      "title": "Yeah",
-      "artist": "Charli xcx",
-      "spotifyUrl": "https://open.spotify.com/track/0N7tCm0qrH7JFmDfwkRfRI",
-      "coverImage": "https://i.scdn.co/image/ab67616d0000b273238e2ff91714a8db91b8a64d"
-    },
-    {
-      "id": "3lIHa4fUwNKOCSS5k3Za0i",
-      "title": "nothing",
+      "id": "3kKPZFQse4LtbnMRhnAlEO",
+      "title": "doom",
       "artist": "Steve Lacy",
-      "spotifyUrl": "https://open.spotify.com/track/3lIHa4fUwNKOCSS5k3Za0i",
+      "spotifyUrl": "https://open.spotify.com/track/3kKPZFQse4LtbnMRhnAlEO",
       "coverImage": "https://i.scdn.co/image/ab67616d0000b2734ea9ba86cd9506a004bab042"
+    },
+    {
+      "id": "63E1KzqmJcSl0likZCCNZo",
+      "title": "I Want",
+      "artist": "Mk.gee",
+      "spotifyUrl": "https://open.spotify.com/track/63E1KzqmJcSl0likZCCNZo",
+      "coverImage": "https://i.scdn.co/image/ab67616d0000b2738b048b6486231cca4766a076"
     }
   ],
   "albums": [
@@ -87,25 +87,25 @@
       "coverImage": "https://i.scdn.co/image/ab67616d0000b2739d6bd2afa2987a69b7b55f72"
     },
     {
-      "id": "0nqsPuGO0iEl4MRWwjhWF2",
-      "title": "Do That Again",
-      "artist": "Malcolm Todd",
-      "spotifyUrl": "https://open.spotify.com/album/0nqsPuGO0iEl4MRWwjhWF2",
-      "coverImage": "https://i.scdn.co/image/ab67616d0000b2736ad1bfc5a6102f8e926a8c5f"
-    },
-    {
-      "id": "4bR7pd6TVS53l24qFV4wI8",
-      "title": "Music, Fashion, Film",
-      "artist": "Charli xcx",
-      "spotifyUrl": "https://open.spotify.com/album/4bR7pd6TVS53l24qFV4wI8",
-      "coverImage": "https://i.scdn.co/image/ab67616d0000b273238e2ff91714a8db91b8a64d"
-    },
-    {
       "id": "2jX6yKrWw9bY7JAYHhhtqZ",
       "title": "Sweet Boy",
       "artist": "Malcolm Todd",
       "spotifyUrl": "https://open.spotify.com/album/2jX6yKrWw9bY7JAYHhhtqZ",
       "coverImage": "https://i.scdn.co/image/ab67616d0000b2732c1f34ecc1929fb59908aad1"
+    },
+    {
+      "id": "62xd4emBJXINuYl0RzfvO8",
+      "title": "Two Star & The Dream Police",
+      "artist": "Mk.gee",
+      "spotifyUrl": "https://open.spotify.com/album/62xd4emBJXINuYl0RzfvO8",
+      "coverImage": "https://i.scdn.co/image/ab67616d0000b2738b048b6486231cca4766a076"
+    },
+    {
+      "id": "0nqsPuGO0iEl4MRWwjhWF2",
+      "title": "Do That Again",
+      "artist": "Malcolm Todd",
+      "spotifyUrl": "https://open.spotify.com/album/0nqsPuGO0iEl4MRWwjhWF2",
+      "coverImage": "https://i.scdn.co/image/ab67616d0000b2736ad1bfc5a6102f8e926a8c5f"
     },
     {
       "id": "18qJgKH8dyYe2RRp6TbnNY",
@@ -122,18 +122,11 @@
       "coverImage": "https://i.scdn.co/image/ab67616d0000b273c5945c4a5e75f0a705cf9246"
     },
     {
-      "id": "62xd4emBJXINuYl0RzfvO8",
-      "title": "Two Star & The Dream Police",
-      "artist": "Mk.gee",
-      "spotifyUrl": "https://open.spotify.com/album/62xd4emBJXINuYl0RzfvO8",
-      "coverImage": "https://i.scdn.co/image/ab67616d0000b2738b048b6486231cca4766a076"
-    },
-    {
-      "id": "3Ry4DmajssDWHmThH2KseJ",
-      "title": "boy",
-      "artist": "Luke Hemmings",
-      "spotifyUrl": "https://open.spotify.com/album/3Ry4DmajssDWHmThH2KseJ",
-      "coverImage": "https://i.scdn.co/image/ab67616d0000b273283260703c6078bf8b11aec9"
+      "id": "3MaikI62Ap7RbrBSE0i4AU",
+      "title": "Paradigm",
+      "artist": "Christian Kuria",
+      "spotifyUrl": "https://open.spotify.com/album/3MaikI62Ap7RbrBSE0i4AU",
+      "coverImage": "https://i.scdn.co/image/ab67616d0000b27375f4f2d312a79e49334f9933"
     },
     {
       "id": "2ffVa2UhHUDwMHnr685zJ4",
@@ -141,6 +134,13 @@
       "artist": "Addison Rae",
       "spotifyUrl": "https://open.spotify.com/album/2ffVa2UhHUDwMHnr685zJ4",
       "coverImage": "https://i.scdn.co/image/ab67616d0000b273089511953028cbfeb095c593"
+    },
+    {
+      "id": "4bR7pd6TVS53l24qFV4wI8",
+      "title": "Music, Fashion, Film",
+      "artist": "Charli xcx",
+      "spotifyUrl": "https://open.spotify.com/album/4bR7pd6TVS53l24qFV4wI8",
+      "coverImage": "https://i.scdn.co/image/ab67616d0000b273238e2ff91714a8db91b8a64d"
     }
   ],
   "weeklyRecaps": [
