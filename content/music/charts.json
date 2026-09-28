@@ -22,13 +22,6 @@
       "coverImage": "https://i.scdn.co/image/ab67616d0000b273a4b3a51e2b3941f5275f052f"
     },
     {
-      "id": "2QNndTbo9mvgOoOKJvpEl2",
-      "title": "I Got You",
-      "artist": "Bazzi",
-      "spotifyUrl": "https://open.spotify.com/track/2QNndTbo9mvgOoOKJvpEl2",
-      "coverImage": "https://i.scdn.co/image/ab67616d0000b2736d415f423a260947c291f54c"
-    },
-    {
       "id": "4f50UTC41M2Ah5itifSGE5",
       "title": "show you me",
       "artist": "Steve Lacy",
@@ -43,13 +36,6 @@
       "coverImage": "https://i.scdn.co/image/ab67616d0000b2734ea9ba86cd9506a004bab042"
     },
     {
-      "id": "2duvkmcQAezPigFEGlERuA",
-      "title": "begged",
-      "artist": "Olivia Rodrigo",
-      "spotifyUrl": "https://open.spotify.com/track/2duvkmcQAezPigFEGlERuA",
-      "coverImage": "https://i.scdn.co/image/ab67616d0000b2736949b83f85d782b21ce70583"
-    },
-    {
       "id": "1iNjMcvGNJ7TSWZfVC6Eeh",
       "title": "Slow Fade",
       "artist": "Christian Kuria",
@@ -57,11 +43,11 @@
       "coverImage": "https://i.scdn.co/image/ab67616d0000b27375f4f2d312a79e49334f9933"
     },
     {
-      "id": "4c57ZlmIohTkITIGzyE197",
-      "title": "Stranger",
-      "artist": "Dijon",
-      "spotifyUrl": "https://open.spotify.com/track/4c57ZlmIohTkITIGzyE197",
-      "coverImage": "https://i.scdn.co/image/ab67616d0000b273a5af4384ef4a9dd3fec1b285"
+      "id": "2QNndTbo9mvgOoOKJvpEl2",
+      "title": "I Got You",
+      "artist": "Bazzi",
+      "spotifyUrl": "https://open.spotify.com/track/2QNndTbo9mvgOoOKJvpEl2",
+      "coverImage": "https://i.scdn.co/image/ab67616d0000b2736d415f423a260947c291f54c"
     },
     {
       "id": "0JeAKH2DCIgCCrZ9qBGthg",
@@ -69,6 +55,20 @@
       "artist": "Malcolm Todd",
       "spotifyUrl": "https://open.spotify.com/track/0JeAKH2DCIgCCrZ9qBGthg",
       "coverImage": "https://i.scdn.co/image/ab67616d0000b2736ad1bfc5a6102f8e926a8c5f"
+    },
+    {
+      "id": "0zbf6dj8GkCdYRRRph7ELk",
+      "title": "Party",
+      "artist": "Troye Sivan",
+      "spotifyUrl": "https://open.spotify.com/track/0zbf6dj8GkCdYRRRph7ELk",
+      "coverImage": "https://i.scdn.co/image/ab67616d0000b27349a03fb4047daf097bb12f5f"
+    },
+    {
+      "id": "2duvkmcQAezPigFEGlERuA",
+      "title": "begged",
+      "artist": "Olivia Rodrigo",
+      "spotifyUrl": "https://open.spotify.com/track/2duvkmcQAezPigFEGlERuA",
+      "coverImage": "https://i.scdn.co/image/ab67616d0000b2736949b83f85d782b21ce70583"
     }
   ],
   "albums": [
@@ -87,13 +87,6 @@
       "coverImage": "https://i.scdn.co/image/ab67616d0000b2734ea9ba86cd9506a004bab042"
     },
     {
-      "id": "18qJgKH8dyYe2RRp6TbnNY",
-      "title": "you seem pretty sad for a girl so in love",
-      "artist": "Olivia Rodrigo",
-      "spotifyUrl": "https://open.spotify.com/album/18qJgKH8dyYe2RRp6TbnNY",
-      "coverImage": "https://i.scdn.co/image/ab67616d0000b2736949b83f85d782b21ce70583"
-    },
-    {
       "id": "3MaikI62Ap7RbrBSE0i4AU",
       "title": "Paradigm",
       "artist": "Christian Kuria",
@@ -108,6 +101,13 @@
       "coverImage": "https://i.scdn.co/image/ab67616d0000b2736ad1bfc5a6102f8e926a8c5f"
     },
     {
+      "id": "18qJgKH8dyYe2RRp6TbnNY",
+      "title": "you seem pretty sad for a girl so in love",
+      "artist": "Olivia Rodrigo",
+      "spotifyUrl": "https://open.spotify.com/album/18qJgKH8dyYe2RRp6TbnNY",
+      "coverImage": "https://i.scdn.co/image/ab67616d0000b2736949b83f85d782b21ce70583"
+    },
+    {
       "id": "62xd4emBJXINuYl0RzfvO8",
       "title": "Two Star & The Dream Police",
       "artist": "Mk.gee",
@@ -115,18 +115,18 @@
       "coverImage": "https://i.scdn.co/image/ab67616d0000b2738b048b6486231cca4766a076"
     },
     {
-      "id": "2ffVa2UhHUDwMHnr685zJ4",
-      "title": "Addison",
-      "artist": "Addison Rae",
-      "spotifyUrl": "https://open.spotify.com/album/2ffVa2UhHUDwMHnr685zJ4",
-      "coverImage": "https://i.scdn.co/image/ab67616d0000b273089511953028cbfeb095c593"
+      "id": "5qoVwu8l7VyXOiMjjmyeAD",
+      "title": "Borderline",
+      "artist": "Christian Kuria",
+      "spotifyUrl": "https://open.spotify.com/album/5qoVwu8l7VyXOiMjjmyeAD",
+      "coverImage": "https://i.scdn.co/image/ab67616d0000b2735d9f44aad41cfdf90f4d039a"
     },
     {
-      "id": "2jX6yKrWw9bY7JAYHhhtqZ",
-      "title": "Sweet Boy",
-      "artist": "Malcolm Todd",
-      "spotifyUrl": "https://open.spotify.com/album/2jX6yKrWw9bY7JAYHhhtqZ",
-      "coverImage": "https://i.scdn.co/image/ab67616d0000b2732c1f34ecc1929fb59908aad1"
+      "id": "1G3k89T6eKqTXU9qbDqmr6",
+      "title": "Friends",
+      "artist": "Omar Apollo",
+      "spotifyUrl": "https://open.spotify.com/album/1G3k89T6eKqTXU9qbDqmr6",
+      "coverImage": "https://i.scdn.co/image/ab67616d0000b2732b6ac03f570ff5c15372d98c"
     },
     {
       "id": "0bIXnppwOEeFqEUV0vqJJn",
@@ -136,11 +136,11 @@
       "coverImage": "https://i.scdn.co/image/ab67616d0000b273f9d3d64dd4f38611a350fd2a"
     },
     {
-      "id": "1G3k89T6eKqTXU9qbDqmr6",
-      "title": "Friends",
-      "artist": "Omar Apollo",
-      "spotifyUrl": "https://open.spotify.com/album/1G3k89T6eKqTXU9qbDqmr6",
-      "coverImage": "https://i.scdn.co/image/ab67616d0000b2732b6ac03f570ff5c15372d98c"
+      "id": "2ffVa2UhHUDwMHnr685zJ4",
+      "title": "Addison",
+      "artist": "Addison Rae",
+      "spotifyUrl": "https://open.spotify.com/album/2ffVa2UhHUDwMHnr685zJ4",
+      "coverImage": "https://i.scdn.co/image/ab67616d0000b273089511953028cbfeb095c593"
     }
   ],
   "weeklyRecaps": [
